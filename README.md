@@ -26,7 +26,9 @@ Har ghante GitHub check karta hai: koi slot (12 PM / 4 PM / 7 PM) 3 ghante mein 
   ├─ YouTube upload, 3 ghante baad publish (12 PM / 4 PM / 7 PM)
   └─ state/ commit (history, series, aur fail hua ho to last_error.txt)
 ```
-Claude fail ho jaye to `samples/` ki series use hoti hai, taaki us din ki video na chhoote.
+Claude fail ho jaye to `samples/` ki series use hoti hai (har format ki 2: Pundalik Ki Eent, Barbarik Ka Sheesh Daan,
+Jaadui Lakdi Ka Nyay, Thaili Kiski?), taaki us din ki video na chhoote. Claude ki adhoori script dobara likhwayi jaati hai.
+YouTube secrets na hon to scheduled run chupchaap ruk jaata hai (fail email nahi aata).
 
 ## Code ka naksha (`reels/`)
 
@@ -71,6 +73,9 @@ Script ka format (Claude jo JSON likhta hai) `writer.py` mein `SCHEMA` hai. Exam
 
 ### 3. Test
 GitHub → **Actions → Daily Reel → Run workflow**: pehle `upload = false` (video Artifacts mein milegi), phir `true`.
+
+**Check workflow:** har code push par GitHub saare samples ka preview banata hai (Actions → Check → `previews` artifact).
+Wo laal (fail) ho to code me kuch toota hai.
 
 **YouTube audit:** naye API projects ki videos **Private** rehti hain jab tak
 [API audit](https://support.google.com/youtube/contact/yt_api_form) approve na ho. Tab tak Studio mein Public kar dijiye.

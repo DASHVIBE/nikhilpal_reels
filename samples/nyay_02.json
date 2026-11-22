@@ -1,0 +1,62 @@
+{
+ "type": "paheli",
+ "series_title": "Thaili Kiski?",
+ "parts": [
+  {
+   "topic": "Tel wala aur lakadhara, chaandi ke sikkon ki ek thaili par dono ka daava",
+   "hook": "Thaili Ka *Maalik* Kaun?",
+   "p_name": "Chatur",
+   "label": "CHATUR KA NYAY",
+   "title_line1": "Thaili",
+   "title_line2": "Kiski?",
+   "title_sub": "Do daavedaar, ek sach",
+   "end_text": "SACHCHA KAUN?",
+   "end_sub": "Faisla kal Part 2 mein",
+   "yt_title": "एक थैली, दो मालिक... सच्चा कौन? 🕵️ Chatur Ka Nyay | Part 1 #shorts",
+   "yt_description": "Tel wala aur lakadhara, dono kehte hain chaandi ke sikkon ki thaili unki hai.\nGawah koi nahi, aur Raja uljhan mein.\nAap batao, asli maalik kaun? Faisla kal Part 2 mein.\n#chaturkanyay #nyay #hindistory #mysterystory #dimagwalikahani #rajakikahani #shorts",
+   "tags": ["chatur ka nyay", "thaili kiski", "mystery story hindi", "jasoosi kahani", "raja ka nyay", "hindi story", "dimag wali kahani", "shorts"],
+   "shots": [
+    {"scene": "darbar", "mood": "angry", "sticker": "DO DAAVEDAAR", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "दरबार में दो आदमी, एक ही थैली के लिए लड़ रहे थे। एक तेल वाला, और एक लकड़हारा।", "caption": "Ek *tel wala* aur ek *lakadhara*, ek hi thaili ke liye lad rahe the."}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "", "cards": [{"icon": "coin", "label": "100 Sikke"}, {"icon": "question", "label": "Maalik Kaun?"}], "lines": [
+     {"speaker": "N", "hindi": "थैली में चाँदी के सौ सिक्के थे। दोनों कहते, ये मेरी मेहनत की कमाई है।", "caption": "Thaili mein chaandi ke *sau sikke*. Dono kehte, ye meri kamaai hai!"}]},
+    {"scene": "darbar", "mood": "shock", "sticker": "", "cards": [], "lines": [
+     {"speaker": "R", "hindi": "कोई गवाह नहीं, कोई सबूत नहीं। मैं कैसे तय करूँ, कौन सच्चा है?", "caption": "Koi *gawah* nahi, koi saboot nahi. Kaun sachcha hai?"}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "EK SURAAG", "cards": [{"icon": "lamp", "label": "Tel Wala"}], "lines": [
+     {"speaker": "N", "hindi": "ध्यान दीजिए... तेल वाले के हाथ दिन भर तेल से सने रहते हैं।", "caption": "Dhyan dijiye... tel wale ke haath din bhar *tel se sane* rehte hain."}]},
+    {"scene": "darbar", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "C", "hindi": "महाराज, मुझे बस एक कटोरा पानी चाहिए। थैली खुद बता देगी, उसका मालिक कौन है।", "caption": "Mujhe bas ek *katora paani* chahiye. Thaili khud bata degi!"}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "पानी से सच कैसे निकलेगा? आप बताइए, असली मालिक कौन है? फ़ैसला कल पार्ट दो में!", "caption": "Aap batao, *asli maalik* kaun? Faisla kal *Part 2* mein!"}]}
+   ]
+  },
+  {
+   "topic": "Tel wala aur lakadhara, chaandi ke sikkon ki ek thaili par dono ka daava",
+   "hook": "Paani Ne *Sach* Bataya!",
+   "p_name": "Chatur",
+   "label": "CHATUR KA NYAY",
+   "title_line1": "Paani Ka",
+   "title_line2": "Faisla",
+   "title_sub": "Thaili ka asli maalik",
+   "end_text": "JAWAB SAHI THA?",
+   "end_sub": "Comment mein batao",
+   "yt_title": "पानी ने बताया थैली का असली मालिक 😲 Chatur Ka Nyay | Part 2 #shorts",
+   "yt_description": "Chatur ne chaandi ke sikke paani ke katore mein daal diye...\nAur paani par tel ki parat tair gayi!\nKya aapne sahi socha tha? Comment mein batao.\n#chaturkanyay #nyay #hindistory #mysterystory #dimagwalikahani #shorts",
+   "tags": ["chatur ka nyay", "thaili kiski jawab", "mystery story hindi", "jasoosi kahani", "raja ka nyay", "hindi story", "shorts"],
+   "shots": [
+    {"scene": "darbar", "mood": "neutral", "sticker": "", "cards": [{"icon": "coin", "label": "100 Sikke"}], "lines": [
+     {"speaker": "N", "hindi": "तेल वाला और लकड़हारा, दोनों एक ही थैली को अपनी बता रहे थे।", "caption": "Tel wala aur lakadhara, dono ek hi *thaili* ko apni bata rahe the."}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "KATORA PAANI", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "चतुर ने सारे सिक्के, पानी के एक कटोरे में डाल दिए... और सब देखते रह गए।", "caption": "Chatur ne saare sikke *paani ke katore* mein daal diye."}]},
+    {"scene": "darbar", "mood": "happy", "sticker": "", "cards": [{"icon": "lamp", "label": "Tel Ki Parat"}], "lines": [
+     {"speaker": "C", "hindi": "महाराज, देखिए! पानी पर तेल की परत तैर रही है।", "caption": "Dekhiye! Paani par *tel ki parat* tair rahi hai."}]},
+    {"scene": "darbar", "mood": "happy", "sticker": "", "cards": [{"icon": "tick", "label": "Tel Wala"}, {"icon": "cross", "label": "Lakadhara"}], "lines": [
+     {"speaker": "C", "hindi": "ये सिक्के रोज़ तेल वाले के हाथों से गुज़रे हैं। थैली उसी की है।", "caption": "Ye sikke roz *tel wale* ke haathon se guzre hain. Thaili usi ki hai!"}]},
+    {"scene": "darbar", "mood": "angry", "sticker": "", "cards": [], "lines": [
+     {"speaker": "R", "hindi": "लकड़हारे, तुमने झूठ बोला! थैली तेल वाले को लौटाओ, और सज़ा भुगतो।", "caption": "Lakadhare, tumne *jhooth* bola! Thaili lautao aur saza bhugto."}]},
+    {"scene": "darbar", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "सीख यही है... झूठ कितना भी चालाक हो, सच का एक छोटा निशान उसे पकड़ लेता है।", "caption": "Sach ka *ek chhota nishaan* jhooth ko pakad leta hai!"}]}
+   ]
+  }
+ ]
+}

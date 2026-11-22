@@ -1,0 +1,65 @@
+{
+ "type": "devotional",
+ "series_title": "Barbarik Ka Sheesh Daan",
+ "parts": [
+  {
+   "topic": "Barbarik, teen baan aur haarne wale ka saath dene ka pran",
+   "hook": "Sabse Bada *Yoddha* Kaun?",
+   "p_name": "Barbarik",
+   "label": "MAHABHARAT RAHASYA",
+   "title_line1": "Barbarik Ka",
+   "title_line2": "Sheesh Daan",
+   "title_sub": "Jo yuddh lade bina amar hua",
+   "end_text": "AAGE KYA HUA?",
+   "end_sub": "Part 2 kal",
+   "yt_title": "महाभारत का सबसे बड़ा योद्धा, जो युद्ध लड़ा ही नहीं? 🏹 Barbarik की कथा | Part 1 #shorts",
+   "yt_description": "Bheem ka pota Barbarik, jiske ek baan se poori sena mit sakti thi.\nPar uska ek pran tha... jo Mahabharat ko hi khatam kar deta!\nAage kya hua? Part 2 kal.\n#barbarik #khatushyam #mahabharat #krishna #mahabharatrahasya #bhaktkatha #shorts",
+   "tags": ["barbarik", "khatu shyam", "mahabharat", "mahabharat rahasya", "krishna katha", "barbarik ki kahani", "sheesh daan", "shorts"],
+   "shots": [
+    {"scene": "walk", "mood": "neutral", "sticker": "MAHABHARAT RAHASYA", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "क्या आप जानते हैं, महाभारत का सबसे बड़ा योद्धा कौन था... जो युद्ध लड़ा ही नहीं?", "caption": "Mahabharat ka *sabse bada yoddha*, jo yuddh lada hi nahi?"}]},
+    {"scene": "walk", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "युद्ध के बाद, श्रीकृष्ण ने अर्जुन को एक वीर की कथा सुनाई... बर्बरीक की।", "caption": "Shri Krishna ne Arjun ko ek veer ki katha sunaayi... *Barbarik* ki."}]},
+    {"scene": "meet", "mood": "neutral", "sticker": "BHEEM KA POTA", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "बर्बरीक, घटोत्कच का बेटा था। शिव जी के वरदान से उसके पास सिर्फ़ तीन बाण थे।", "caption": "Barbarik ke paas Shiv ji ke vardaan se sirf *teen baan* the."}]},
+    {"scene": "meet", "mood": "shock", "sticker": "", "cards": [], "lines": [
+     {"speaker": "K", "hindi": "अर्जुन, उसका एक ही बाण, पूरी सेना को एक पल में मिटा सकता था।", "caption": "Uska *ek hi baan* poori sena ko ek pal mein mita sakta tha."}]},
+    {"scene": "meet", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "P", "hindi": "मैंने माँ को वचन दिया है... मैं उसी की ओर से लड़ूँगा, जो हार रहा होगा।", "caption": "Main usi ki or se ladunga, jo *haar raha* hoga."}]},
+    {"scene": "meet", "mood": "sad", "sticker": "", "cards": [], "lines": [
+     {"speaker": "K", "hindi": "यही वचन सबसे खतरनाक था। तब मैंने उससे एक दान माँगा।", "caption": "Yahi vachan sabse *khatarnak* tha. Tab maine ek *daan* maanga."},
+     {"speaker": "N", "hindi": "कौन सा दान? आगे क्या हुआ? पार्ट दो कल!", "caption": "Kaun sa daan? Aage kya hua? *Part 2* kal!"}]}
+   ]
+  },
+  {
+   "topic": "Barbarik, teen baan aur haarne wale ka saath dene ka pran",
+   "hook": "Haare Ka *Sahara* Kaun?",
+   "p_name": "Barbarik",
+   "label": "MAHABHARAT RAHASYA",
+   "title_line1": "Sheesh Daan",
+   "title_line2": "Ka Sach",
+   "title_sub": "Barbarik se Khatu Shyam tak",
+   "end_text": "JAI SHRI SHYAM",
+   "end_sub": "Haare ka sahara",
+   "yt_title": "जब बर्बरीक ने भगवान को अपना शीश दान दिया 🙏 Khatu Shyam की कथा | Part 2 #shorts",
+   "yt_description": "Barbarik ka vachan tha haarne wale ka saath dena... jisse koi bhi sena na bachti.\nShri Krishna ne daan maanga, aur Barbarik ne hanste hanste apna sheesh de diya.\nAaj wahi Khatu Shyam ji ke roop mein pooje jaate hain.\n#barbarik #khatushyam #mahabharat #krishna #haarekasahara #bhaktkatha #shorts",
+   "tags": ["barbarik", "khatu shyam", "khatu shyam katha", "haare ka sahara", "mahabharat", "krishna katha", "sheesh daan", "shorts"],
+   "shots": [
+    {"scene": "meet", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "बर्बरीक का वचन था, हारने वाले का साथ देना... और इससे कोई भी सेना नहीं बचती।", "caption": "Haarne wale ka saath dene se *koi bhi sena* nahi bachti."}]},
+    {"scene": "meet", "mood": "neutral", "sticker": "BRAHMIN KA ROOP", "cards": [], "lines": [
+     {"speaker": "K", "hindi": "मैंने ब्राह्मण का रूप लेकर, बर्बरीक से उसका शीश दान में माँगा।", "caption": "Maine brahmin ban kar Barbarik se uska *sheesh daan* maanga."}]},
+    {"scene": "meet", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "P", "hindi": "प्रभु, शीश आपका है। बस एक इच्छा है... मैं पूरा युद्ध देखना चाहता हूँ।", "caption": "Prabhu, sheesh aapka hai. Bas *poora yuddh* dekhna chahta hoon."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "श्रीकृष्ण ने उसका शीश एक ऊँची पहाड़ी पर रखा, और बर्बरीक ने अठारह दिन का युद्ध देखा।", "caption": "Barbarik ne pahadi se *athaarah din* ka yuddh dekha."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "युद्ध के बाद पूछा गया, जीत किसकी थी? बर्बरीक बोला, मैंने हर ओर सिर्फ़ श्रीकृष्ण का चक्र देखा।", "caption": "Barbarik bola: maine har or sirf *Shri Krishna* ka chakra dekha."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "KHATU SHYAM", "cards": [], "lines": [
+     {"speaker": "K", "hindi": "कलयुग में तुम मेरे नाम, श्याम के नाम से पूजे जाओगे।", "caption": "Kalyug mein tum mere naam, *Shyam* ke naam se pooje jaoge."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "इसीलिए आज खाटू श्याम जी के रूप में बर्बरीक पूजे जाते हैं। हारे का सहारा, खाटू श्याम हमारा!", "caption": "Haare ka sahara, *Khatu Shyam* hamara!"}]}
+   ]
+  }
+ ]
+}

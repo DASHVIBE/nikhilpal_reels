@@ -81,16 +81,24 @@ def draw_cards(frame, s, ts):
     cards = (s.get("cards") or [])[:2]
     if not cards or ts <= 0.3:
         return
-    xs = [W / 2] if len(cards) == 1 else [W / 2 - 175, W / 2 + 175]
-    y = 1170                                     # between the faces and the caption box
+    xs = [W / 2] if len(cards) == 1 else [W / 2 - 150, W / 2 + 150]
+    y = 640 if s.get("cam") == "chatur" else 1050    # never over a face: above Chatur in his close-up
     for j, cd in enumerate(cards):
         img = cached(("card", cd["icon"], cd["label"]), lambda: ov.make_card(cd["icon"], cd["label"]))
         a = max(0.0, ts - 0.3 - j*0.25)
-        ov.overlay(frame, img, xs[j], y, lerp(0.3, 1.0, ease_back(a / 0.3)), clamp(a / 0.08) * clamp((s["dur"] - ts) / 0.3))
+        ov.overlay(frame, img, xs[j], y, 0.8 * lerp(0.3, 1.0, ease_back(a / 0.3)), clamp(a / 0.08) * clamp((s["dur"] - ts) / 0.3))
+
+
+def draw_progress(frame, T):
+    """Thin saffron bar along the top edge that fills up over the whole reel."""
+    w = int(W * clamp(T / TL["total"]))
+    if w > 0: frame.paste(ov.SAFFRON, (0, 0, w, 10))
+    frame.paste(ov.PLUM, (w, 0, W, 10))
 
 
 def draw_overlays(frame, T, si, s, end_at):
     ts = T - s["start"]
+    draw_progress(frame, T)
     draw_sticker(frame, T, si, s, ts)
     draw_cards(frame, s, ts)
     pill_end = min(9.0, end_at - 0.5)

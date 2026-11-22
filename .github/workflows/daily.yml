@@ -30,7 +30,13 @@ jobs:
 
       - name: Is a video due?
         id: due
+        env:
+          HAS_YT: ${{ secrets.YT_REFRESH_TOKEN != '' }}
         run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$HAS_YT" != "true" ]; then
+            echo "::notice title=Setup pending::YouTube secrets are not set yet, so scheduled runs make nothing."
+            echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then DUE=$(python3 -m reels.schedule --force); else DUE=$(python3 -m reels.schedule); fi
           echo "due: $DUE"
           if [ "$DUE" = "none" ]; then echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi

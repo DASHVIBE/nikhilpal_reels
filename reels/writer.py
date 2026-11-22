@@ -148,13 +148,35 @@ def write_series(kind, date_str, trends, recent_titles, used_stories=()):
     story_name, story = next_story(kind, set(used_stories))
     system = "\n\n".join([INTRO, FORMAT_TEXT[kind], RULES])
     request = build_request(kind, date_str, trends, recent_titles, story)
-    data = _via_api(system, request) if "".join(os.environ.get("ANTHROPIC_API_KEY", "").split()) else _via_cli(system, request, research=not story)
-    parts = [p for p in data.get("parts", []) if p.get("shots")][:FORMATS[kind]["parts"]]
-    if not parts:
-        raise RuntimeError("series came back with no parts")
+    use_api = bool("".join(os.environ.get("ANTHROPIC_API_KEY", "").split()))
+    problem = ""
+    for attempt in range(2):                       # one more try if the series comes back incomplete
+        ask = request + (f"\n\nYour previous answer was rejected: {problem}. Fix that." if problem else "")
+        data = _via_api(system, ask) if use_api else _via_cli(system, ask, research=not story and attempt == 0)
+        parts = [p for p in data.get("parts", []) if p.get("shots")][:FORMATS[kind]["parts"]]
+        problem = check_series(kind, parts)
+        if not problem: break
+        print("series rejected:", problem, flush=True)
+    if problem:
+        raise RuntimeError(f"series incomplete: {problem}")
     data.update(parts=parts, type=kind)
     if story_name: data["_story"] = story_name
     return data
+
+
+def check_series(kind, parts):
+    """'' if the series is usable, else what is wrong (sent back to Claude)."""
+    need = 2 if kind == "paheli" else 1
+    if len(parts) < need:
+        return f"a {kind} series needs at least {need} parts with shots, got {len(parts)}"
+    for i, p in enumerate(parts, 1):
+        lines = [l for s in p.get("shots", []) for l in s.get("lines", []) if (l.get("hindi") or "").strip()]
+        if len(p.get("shots", [])) < 4 or len(lines) < 4:
+            return f"part {i} is too short ({len(p.get('shots', []))} shots, {len(lines)} lines)"
+        words = sum(len(l["hindi"].split()) for l in lines)
+        if words > 140:
+            return f"part {i} has {words} spoken words, the limit is 105"
+    return ""
 
 
 # ---------------------------------------------------------------- Claude Code CLI (subscription)
