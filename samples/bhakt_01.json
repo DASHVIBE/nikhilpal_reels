@@ -1,0 +1,63 @@
+{
+ "type": "devotional",
+ "series_title": "Pundalik Ki Eent",
+ "parts": [
+  {
+   "topic": "Pundalik ki matru-pitru seva aur Bhagwan Vitthal ki eent",
+   "hook": "Bhagwan *Eent* Par Kyun?",
+   "p_name": "Pundalik",
+   "label": "BHAKT KATHA",
+   "title_line1": "Pundalik Ki",
+   "title_line2": "Eent",
+   "title_sub": "Pandharpur ka anokha raaz",
+   "end_text": "AAGE KYA HUA?",
+   "end_sub": "Part 2 kal",
+   "yt_title": "भगवान ईंट पर क्यों खड़े हैं? 🙏 Pundalik की अनोखी भक्ति | Part 1 #shorts",
+   "yt_description": "Pandharpur mein Bhagwan Vitthal ek eent par kyun khade hain?\nJab Bhagwan swayam bhakt Pundalik ke dwaar aaye, to Pundalik ne unhe intezaar karwaya!\nAage kya hua? Part 2 kal.\n#pundalik #vitthal #pandharpur #bhaktkatha #krishna #vithoba #bhakti #shorts",
+   "tags": ["pundalik", "vitthal", "pandharpur", "vithoba katha", "bhakt katha", "krishna katha", "matru pitru seva", "shorts"],
+   "shots": [
+    {"scene": "walk", "mood": "neutral", "sticker": "PANDHARPUR KA RAAZ", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "क्या आप जानते हैं, पंढरपुर में भगवान एक ईंट पर क्यों खड़े हैं?", "caption": "Pandharpur mein Bhagwan ek *eent* par kyun khade hain?"}]},
+    {"scene": "walk", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "एक दिन श्रीकृष्ण, अर्जुन को अपने एक प्यारे भक्त से मिलाने चले... उसका नाम था पुंडलीक।", "caption": "Shri Krishna Arjun ko apne pyare bhakt *Pundalik* se milane chale."}]},
+    {"scene": "meet", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "पुंडलीक अपने बूढ़े माता पिता की सेवा में लगा था... उनके पैर दबा रहा था।", "caption": "Pundalik apne boodhe *maata-pita* ki seva mein laga tha."}]},
+    {"scene": "meet", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "A", "hindi": "पुंडलीक! देखो, स्वयं भगवान तुम्हारे द्वार पर आए हैं!", "caption": "Pundalik! Dekho, *swayam Bhagwan* tumhare dwaar aaye hain!"}]},
+    {"scene": "meet", "mood": "neutral", "sticker": "BHAGWAN KO INTEZAAR?", "cards": [], "lines": [
+     {"speaker": "P", "hindi": "प्रणाम प्रभु... पर अभी माँ बाबा की सेवा चल रही है। कृपया थोड़ी देर रुकिए।", "caption": "Pranaam Prabhu... par abhi *maa-baba ki seva* chal rahi hai."}]},
+    {"scene": "meet", "mood": "shock", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "और पुंडलीक ने पास पड़ी एक ईंट, भगवान की ओर खिसका दी... कि इस पर खड़े होकर रुकिए।", "caption": "Pundalik ne ek *eent* Bhagwan ki or khiska di!"},
+     {"speaker": "N", "hindi": "क्या भगवान नाराज़ हुए? आगे क्या हुआ? पार्ट दो कल!", "caption": "Kya Bhagwan *naraaz* hue? Aage kya hua? *Part 2* kal!"}]}
+   ]
+  },
+  {
+   "topic": "Pundalik ki matru-pitru seva aur Bhagwan Vitthal ki eent",
+   "hook": "Bhagwan Ne *Intezaar* Kiya!",
+   "p_name": "Pundalik",
+   "label": "BHAKT KATHA",
+   "title_line1": "Eent Par",
+   "title_line2": "Bhagwan",
+   "title_sub": "Pundalik ki katha, Part 2",
+   "end_text": "JAI VITTHAL",
+   "end_sub": "Jai Shri Krishna",
+   "yt_title": "जब भगवान ने भक्त का इंतज़ार किया 🙏 Pundalik और Vitthal | Part 2 #shorts",
+   "yt_description": "Pundalik ne seva ke beech Bhagwan ko eent par rukne ko kaha.\nBhagwan naraaz nahi hue... balki aaj tak usi eent par khade hain!\nSeekh: maata-pita ki seva hi sabse badi pooja hai.\n#pundalik #vitthal #pandharpur #bhaktkatha #krishna #vithoba #shorts",
+   "tags": ["pundalik", "vitthal", "pandharpur", "vithoba", "bhakt katha", "krishna katha", "maata pita ki seva", "shorts"],
+   "shots": [
+    {"scene": "meet", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "पुंडलीक ने सेवा के बीच, भगवान को एक ईंट पर रुकने को कहा था...", "caption": "Pundalik ne seva ke beech Bhagwan ko *eent par rukne* ko kaha tha."}]},
+    {"scene": "meet", "mood": "shock", "sticker": "", "cards": [], "lines": [
+     {"speaker": "A", "hindi": "केशव, एक भक्त ने आपको इंतज़ार करवाया! आप नाराज़ नहीं?", "caption": "Keshav, ek bhakt ne aapko *intezaar* karwaya! Aap naraaz nahi?"}]},
+    {"scene": "meet", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "K", "hindi": "अर्जुन, जो माता पिता की सेवा करता है, उसकी प्रतीक्षा करना भी मेरा सौभाग्य है।", "caption": "Arjun, jo *maata-pita ki seva* karta hai, uska intezaar bhi mera saubhagya hai."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "KAMAR PAR HAATH", "cards": [], "lines": [
+     {"speaker": "K", "hindi": "पुंडलीक, मैं इसी ईंट पर, कमर पर हाथ रखकर, युगों तक तुम्हारे साथ रहूँगा।", "caption": "Main isi *eent* par, kamar par haath rakh kar, yugon tak rahunga."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "इसीलिए आज भी पंढरपुर में, भगवान विट्ठल ईंट पर, कमर पर हाथ रखे खड़े हैं।", "caption": "Aaj bhi Pandharpur mein *Bhagwan Vitthal* eent par khade hain."}]},
+    {"scene": "divine", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "सीख यही है... माता पिता की सेवा ही सबसे बड़ी पूजा है। जय विट्ठल!", "caption": "Maata-pita ki seva hi *sabse badi pooja* hai. Jai Vitthal!"}]}
+   ]
+  }
+ ]
+}

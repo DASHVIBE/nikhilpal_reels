@@ -1,0 +1,3 @@
+- Ghamandi raja ki paheli: "wo kya hai jo raja aur bhagwan ke paas nahi, par garib ke paas hai"
+- Bhookha garib bhakt apna khana Krishna ko bhog lagata hai
+- Garib aadmi roz pooja karke bhi dukhi; Krishna kisaan aur beej ki misaal se karm-phal samjhate hain

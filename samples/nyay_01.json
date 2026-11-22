@@ -1,0 +1,62 @@
+{
+ "type": "paheli",
+ "series_title": "Jaadui Lakdi Ka Nyay",
+ "parts": [
+  {
+   "topic": "Rani ka haar chori, paanch naukar, Chatur ki jaadui lakdi",
+   "hook": "Haar Ka *Chor* Kaun?",
+   "p_name": "Chatur",
+   "label": "CHATUR KA NYAY",
+   "title_line1": "Kaun Hai",
+   "title_line2": "Chor?",
+   "title_sub": "Mahal se haar gayab!",
+   "end_text": "CHOR KAUN?",
+   "end_sub": "Faisla kal Part 2 mein",
+   "yt_title": "रानी का हार किसने चुराया? 🕵️ Chatur Ka Nyay | Part 1 #shorts",
+   "yt_description": "Mahal se Rani ka heere ka haar chori ho gaya... aur shak paanch naukaron par!\nRaja kuch tay nahi kar pa rahe. Tab Chatur ek ajeeb chaal chalta hai.\nAap batao, chor kaun? Faisla kal Part 2 mein.\n#chaturkanyay #kaunhaichor #hindistory #mysterystory #dimagwalikahani #rajakikahani #shorts",
+   "tags": ["chatur ka nyay", "kaun hai chor", "mystery story hindi", "jasoosi kahani", "raja ki kahani", "hindi story", "dimag wali kahani", "shorts"],
+   "shots": [
+    {"scene": "darbar", "mood": "shock", "sticker": "MAHAL MEIN CHORI", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "रात को महल से रानी का हीरे का हार चोरी हो गया... और सुबह दरबार में हड़कंप मच गया।", "caption": "Mahal se Rani ka *heere ka haar* chori ho gaya!"}]},
+    {"scene": "darbar", "mood": "angry", "sticker": "", "cards": [{"icon": "crown", "label": "Rani Ka Haar"}, {"icon": "question", "label": "5 Naukar"}], "lines": [
+     {"speaker": "R", "hindi": "उस कमरे में रात को सिर्फ़ पाँच नौकर गए थे। इन्हीं में से कोई चोर है!", "caption": "Kamre mein sirf *paanch naukar* gaye the. Inhi mein se koi chor hai!"}]},
+    {"scene": "darbar", "mood": "sad", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "पाँचों नौकर रो पड़े... हर कोई कसम खा रहा था कि उसने चोरी नहीं की।", "caption": "Paanchon naukar *kasam* kha rahe the... humne chori nahi ki!"}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "", "cards": [], "lines": [
+     {"speaker": "C", "hindi": "महाराज, आज्ञा दें। चोर को मैं एक रात में पकड़ लूँगा।", "caption": "Maharaj, chor ko main *ek raat* mein pakad loonga."}]},
+    {"scene": "darbar", "mood": "shock", "sticker": "JAADUI LAKDI", "cards": [], "lines": [
+     {"speaker": "C", "hindi": "ये पाँच बराबर लकड़ियाँ हैं, जादुई। चोर की लकड़ी रात भर में एक उंगली बढ़ जाएगी!", "caption": "Chor ki lakdi raat bhar mein *ek ungli badh* jayegi!"}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "", "cards": [{"icon": "clock", "label": "Kal Subah"}], "lines": [
+     {"speaker": "N", "hindi": "सबको एक एक लकड़ी देकर घर भेज दिया गया। अब आप बताइए, चोर पकड़ा कैसे जाएगा? फ़ैसला कल पार्ट दो में!", "caption": "Aap batao, chor *kaise pakda* jayega? Faisla kal *Part 2* mein!"}]}
+   ]
+  },
+  {
+   "topic": "Rani ka haar chori, paanch naukar, Chatur ki jaadui lakdi",
+   "hook": "Chor Ne *Khud* Bataya!",
+   "p_name": "Chatur",
+   "label": "CHATUR KA NYAY",
+   "title_line1": "Jaadui Lakdi",
+   "title_line2": "Ka Sach",
+   "title_sub": "Chor kaise pakda gaya?",
+   "end_text": "JAWAB SAHI THA?",
+   "end_sub": "Comment mein batao",
+   "yt_title": "जादुई लकड़ी ने चोर पकड़ा 😲 Chatur Ka Nyay | Part 2 #shorts",
+   "yt_description": "Chatur ne paanchon naukaron ko ek-ek jaadui lakdi di thi.\nSubah ek lakdi chhoti nikli... aur chor pakda gaya!\nKya aapne sahi socha tha? Comment mein batao.\n#chaturkanyay #kaunhaichor #hindistory #mysterystory #dimagwalikahani #shorts",
+   "tags": ["chatur ka nyay", "chor kaise pakda", "mystery story hindi", "jasoosi kahani", "raja ki kahani", "hindi story", "shorts"],
+   "shots": [
+    {"scene": "darbar", "mood": "neutral", "sticker": "AGLI SUBAH", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "अगली सुबह, पाँचों नौकर अपनी अपनी लकड़ी लेकर दरबार में आए।", "caption": "Agli subah paanchon naukar apni *lakdi* lekar aaye."}]},
+    {"scene": "darbar", "mood": "neutral", "sticker": "", "cards": [{"icon": "tick", "label": "4 Barabar"}, {"icon": "cross", "label": "1 Chhoti"}], "lines": [
+     {"speaker": "C", "hindi": "महाराज, देखिए। चार लकड़ियाँ बराबर हैं... पर ये एक लकड़ी, एक उंगली छोटी है!", "caption": "Chaar lakdiyan barabar... par ye ek *ungli chhoti* hai!"}]},
+    {"scene": "darbar", "mood": "shock", "sticker": "", "cards": [], "lines": [
+     {"speaker": "R", "hindi": "छोटी? पर तुमने तो कहा था, चोर की लकड़ी बढ़ेगी!", "caption": "Chhoti? Par tumne kaha tha chor ki lakdi *badhegi*!"}]},
+    {"scene": "darbar", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "C", "hindi": "लकड़ी जादुई थी ही नहीं, महाराज। चोर डर गया, और रात में अपनी लकड़ी एक उंगली काट दी।", "caption": "Lakdi jaadui thi hi nahi! Chor ne *darr kar* use kaat diya."}]},
+    {"scene": "darbar", "mood": "angry", "sticker": "", "cards": [{"icon": "crown", "label": "Haar Mila"}], "lines": [
+     {"speaker": "N", "hindi": "चोर ने सब कबूल कर लिया, और रानी का हार लौटा दिया। राजा ने उसे कड़ी सज़ा दी।", "caption": "Chor ne sab *kabool* kar liya, aur haar lauta diya."}]},
+    {"scene": "darbar", "mood": "happy", "sticker": "", "cards": [], "lines": [
+     {"speaker": "N", "hindi": "सीख यही है... सच्चे को डर नहीं लगता, और झूठा अपने ही डर से पकड़ा जाता है।", "caption": "Jhootha apne hi *darr* se pakda jaata hai!"}]}
+   ]
+  }
+ ]
+}
