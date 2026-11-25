@@ -1,1 +1,287 @@
-{"active": null, "last_kind": null}
+{
+ "active": {
+  "series_title": "Chor Ki Daadhi Mein Tinka",
+  "parts": [
+   {
+    "topic": "Raja ki anguthi bhare darbar se gayab, teen daadhi wale darbariyon par shak",
+    "hook": "Anguthi ka *chor* kaun?",
+    "p_name": "Chatur",
+    "label": "KAUN HAI CHOR?",
+    "title_line1": "RAJA KI ANGUTHI",
+    "title_line2": "KAUN HAI CHOR?",
+    "title_sub": "Chatur Ka Nyay - Part 1",
+    "end_text": "JAWAB LIKHO",
+    "end_sub": "Comment mein naam likho",
+    "yt_title": "राजा की अंगूठी किसने चुराई? Chatur Ka Nyay Part 1 🤔 #shorts",
+    "yt_description": "Bhare darbar se Raja ki heere wali anguthi gayab!\nTeen izzatdar darbari, teeno ki kasam... par chor ek hi hai.\nChatur kehta hai: chor mil gaya! Aap batao, kaun?\n#ChaturKaNyay #Paheli #HindiKahani #LokKatha #JasoosiKahani #Shorts #DimagWaliPaheli",
+    "tags": [
+     "chatur ka nyay",
+     "hindi paheli",
+     "lok katha",
+     "raja ki kahani",
+     "chor kaun",
+     "jasoosi kahani",
+     "hindi story",
+     "birbal style kahani",
+     "dimag wali paheli",
+     "cartoon kahani"
+    ],
+    "shots": [
+     {
+      "scene": "darbar",
+      "mood": "shock",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "crown",
+        "label": "Shahi Anguthi"
+       },
+       {
+        "icon": "question",
+        "label": "Chor Kaun?"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "भरे दरबार से राजा की अंगूठी गायब... चोर इसी दरबार में है, पर कौन?",
+        "caption": "Bhare darbar se Raja ki *anguthi gayab*... chor isi darbar mein hai, par *kaun*?"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "angry",
+      "sticker": "DARBAR KE DARWAZE BAND",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "कोई बाहर नहीं जाएगा! जिसने भी चुराई है, अभी सामने आ जाए!",
+        "caption": "Koi *bahar* nahi jayega! Jisne bhi churayi hai, abhi *saamne* aa jaye!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "neutral",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "lamp",
+        "label": "Mez Ke Paas"
+       },
+       {
+        "icon": "tick",
+        "label": "Teeno Daadhi"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "मेज़ के पास सिर्फ़ तीन दरबारी गए थे... दीवान, खज़ांची और सेनापति।",
+        "caption": "Mez ke paas sirf *teen darbari* gaye the... Diwan, Khazanchi aur Senapati."
+       },
+       {
+        "speaker": "N",
+        "hindi": "तीनों की लंबी दाढ़ी, और तीनों ने कसम खाई... हम बेकसूर हैं!",
+        "caption": "Teeno ki *lambi daadhi*, aur teeno ne *kasam* khayi... hum bekasoor hain!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "sad",
+      "sticker": "TEENO KI KASAM",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "तीनों इज़्ज़तदार हैं, तीनों कसम खा रहे हैं... मैं किसे चोर मानूँ?",
+        "caption": "Teeno izzatdar hain, teeno kasam kha rahe hain... main *kise chor* maanu?"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "tick",
+        "label": "Chor Mil Gaya"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "C",
+        "hindi": "महाराज, सबूत की ज़रूरत नहीं। चोर यहीं खड़ा है... और मैंने उसे पहचान लिया है!",
+        "caption": "Maharaj, *saboot* ki zaroorat nahi. Chor yahin khada hai... aur maine use *pehchaan* liya hai!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "shock",
+      "sticker": "SAANS ROKO",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "पूरा दरबार सन्न... तीनों दरबारियों के माथे पर पसीना।",
+        "caption": "Poora darbar *sann*... teeno darbariyon ke maathe par *paseena*."
+       },
+       {
+        "speaker": "N",
+        "hindi": "आप बताओ, चोर कौन है? फ़ैसला कल पार्ट दो में!",
+        "caption": "Aap batao, *chor kaun* hai? Faisla kal *Part 2* mein!"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Chatur ki chaal: chor ki daadhi mein tinka, ghabraya khazanchi pakda gaya",
+    "hook": "Daadhi mein *tinka*!",
+    "p_name": "Chatur",
+    "label": "CHATUR KA NYAY",
+    "title_line1": "DAADHI MEIN",
+    "title_line2": "TINKA!",
+    "title_sub": "Chatur ki anokhi chaal",
+    "end_text": "SACH KI JEET",
+    "end_sub": "Kal naya case, follow karo",
+    "yt_title": "चोर की दाढ़ी में तिनका! Chatur Ka Nyay Part 2 🔥 #shorts",
+    "yt_description": "Teen daadhi wale darbari, ek gayab anguthi.\nChatur ne bina saboot ek chhoti si chaal se chor pakad liya!\nSeekh: chor ka mann hi use pakadwa deta hai.\n#ChaturKaNyay #ChorKiDaadhiMeinTinka #LokKatha #HindiKahani #Paheli #Shorts #Seekh",
+    "tags": [
+     "chor ki daadhi mein tinka",
+     "chatur ka nyay",
+     "lok katha",
+     "hindi kahani",
+     "raja ki anguthi",
+     "paheli ka jawab",
+     "moral story hindi",
+     "jasoosi kahani",
+     "birbal style kahani",
+     "cartoon kahani"
+    ],
+    "shots": [
+     {
+      "scene": "darbar",
+      "mood": "neutral",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "crown",
+        "label": "Shahi Anguthi"
+       },
+       {
+        "icon": "question",
+        "label": "Teen Darbari"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "कल राजा की अंगूठी गायब हुई, और तीन दाढ़ी वाले दरबारी शक के घेरे में थे।",
+        "caption": "Kal Raja ki *anguthi* gayab hui, aur teen *daadhi wale* darbari shak ke ghere mein the."
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "CHATUR KI CHAAL",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "C",
+        "hindi": "महाराज, चोर की पहचान आसान है... चोर की दाढ़ी में एक तिनका अटका है!",
+        "caption": "Maharaj, chor ki pehchaan aasaan hai... chor ki *daadhi* mein ek *tinka* atka hai!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "shock",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "question",
+        "label": "Tinka Kahan?"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "बस इतना सुनना था... खज़ांची ने घबराकर झट से अपनी दाढ़ी पर हाथ फेरा!",
+        "caption": "Bas itna sunna tha... *Khazanchi* ne ghabrakar jhat se apni daadhi par *haath phera*!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "PAKDA GAYA!",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "C",
+        "hindi": "यही है चोर, महाराज! दाढ़ी में कोई तिनका था ही नहीं।",
+        "caption": "Yahi hai chor, Maharaj! Daadhi mein koi *tinka tha hi nahi*."
+       },
+       {
+        "speaker": "C",
+        "hindi": "बेकसूर को डर नहीं लगता... चोर का मन ही उसे पकड़वा देता है।",
+        "caption": "Bekasoor ko *darr* nahi lagta... chor ka *mann* hi use pakadwa deta hai."
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "angry",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "crown",
+        "label": "Anguthi Mili"
+       },
+       {
+        "icon": "cross",
+        "label": "Khazanchi Chor"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "तलाशी लो! अंगूठी इसी की पगड़ी में छिपी थी! इसे कारागार में डाल दो!",
+        "caption": "Talaashi lo! Anguthi isi ki *pagdi* mein chhipi thi! Ise *kaaraagaar* mein daal do!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "SACH KI JEET",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "शाबाश चतुर! तुमने बिना सबूत के सच निकाल दिया।",
+        "caption": "*Shabaash* Chatur! Tumne bina saboot ke *sach* nikaal diya."
+       },
+       {
+        "speaker": "N",
+        "hindi": "सीख यही... झूठ कितना भी छिपाओ, मन का डर उसे खोल देता है।",
+        "caption": "Seekh yahi... *jhooth* kitna bhi chhipao, mann ka *darr* use khol deta hai."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "type": "paheli",
+  "_story": "paheli/01_chor_ki_daadhi_mein_tinka.txt",
+  "next": 1
+ },
+ "last_kind": null
+}
