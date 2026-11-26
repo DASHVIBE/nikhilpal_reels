@@ -1,4 +1,251 @@
 {
- "active": null,
+ "active": {
+  "series_title": "Vidur Ka Saag",
+  "parts": [
+   {
+    "topic": "Krishna ne Duryodhan ke chhappan bhog thukraye aur Vidur ki kutiya pahunche, jahan Vidurani prem me magn hokar kele ke chhilke khilane lagi",
+    "hook": "56 bhog chhod *chhilke* khaye!",
+    "p_name": "Vidur",
+    "label": "BHAKT KATHA",
+    "title_line1": "VIDUR KA SAAG",
+    "title_line2": "56 BHOG THUKRAYE",
+    "title_sub": "Krishna ki anokhi bhookh",
+    "end_text": "HARE KRISHNA",
+    "end_sub": "Part 2 kal, zaroor dekho",
+    "yt_title": "कृष्ण ने छप्पन भोग क्यों ठुकराए? Vidur Ka Saag Part 1 🙏 #shorts",
+    "yt_description": "Shanti doot bankar Shri Krishna Hastinapur aaye, par Duryodhan ka chhappan bhog thukra diya.\nWo seedhe Mahatma Vidur ki saadi kutiya pahunche... aur wahan jo hua, wo kam log jaante hain.\nPart 2 kal!\n#VidurKaSaag #ShriKrishna #Mahabharat #BhaktKatha #JaiShriKrishna #KrishnaKatha #shorts",
+    "tags": [
+     "vidur ka saag",
+     "vidur krishna katha",
+     "krishna vidurani kele",
+     "mahabharat katha",
+     "udyog parv",
+     "shri krishna",
+     "bhakt katha",
+     "krishna arjun",
+     "hindi devotional shorts",
+     "jai shri krishna"
+    ],
+    "shots": [
+     {
+      "scene": "walk",
+      "mood": "neutral",
+      "sticker": "ASLI KATHA",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "क्या आप जानते हो... भगवान ने छप्पन भोग ठुकराकर, केले के छिलके क्यों खाए?",
+        "caption": "Kya aap jaante ho... Bhagwan ne *chhappan bhog* thukrakar, kele ke *chhilke* kyun khaye?"
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "neutral",
+      "sticker": "SHANTI DOOT",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "A",
+        "hindi": "माधव, हस्तिनापुर में आप शांति दूत बनकर गए थे... फिर दुर्योधन का भोजन क्यों नहीं किया?",
+        "caption": "Madhav, Hastinapur me aap *shanti doot* bankar gaye the... phir *Duryodhan* ka bhojan kyun nahi kiya?"
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "neutral",
+      "sticker": "56 BHOG THUKRAYE",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "K",
+        "hindi": "पार्थ, महल सजा था, छप्पन भोग थे... पर मन में प्रेम नहीं था।",
+        "caption": "Parth, mahal saja tha, chhappan bhog the... par man me *prem* nahi tha."
+       },
+       {
+        "speaker": "K",
+        "hindi": "जहाँ प्रेम न हो, वहाँ का भोजन मैं नहीं करता।",
+        "caption": "Jahan *prem* na ho, wahan ka *bhojan* main nahi karta."
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "shock",
+      "sticker": "SAB HAIRAN",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "सारा हस्तिनापुर चौंक गया... कृष्ण महल छोड़कर, सीधे महात्मा विदुर की सादी कुटिया पहुँचे।",
+        "caption": "Saara Hastinapur chaunk gaya... Krishna mahal chhodkar, seedhe *Mahatma Vidur* ki saadi *kutiya* pahunche."
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "happy",
+      "sticker": "PREM ME MAGN",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "विदुरानी ने जैसे ही द्वार पर कृष्ण को देखा... वो प्रेम में सुध-बुध खो बैठीं।",
+        "caption": "*Vidurani* ne jaise hi dwaar par Krishna ko dekha... wo prem me *sudh-budh* kho baithin."
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "shock",
+      "sticker": "",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "उन्होंने केले छीले... पर केले फेंकती गईं, और छिलके भगवान को देती गईं!",
+        "caption": "Unhone kele chheele... par *kele phenkti* gayin, aur *chhilke* Bhagwan ko deti gayin!"
+       },
+       {
+        "speaker": "N",
+        "hindi": "आगे क्या हुआ? पार्ट दो कल!",
+        "caption": "Aage kya hua? *Part 2* kal!"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Vidur lautkar ghabra gaye, par Krishna ne chhilkon ko chhappan bhog se mitha bataya aur Vidur ka saada saag-roti prem se khaya",
+    "hook": "Chhilkon me chhupa *prem*",
+    "p_name": "Vidur",
+    "label": "BHAKT KATHA",
+    "title_line1": "VIDUR KA SAAG",
+    "title_line2": "BHAAV KI BHOOKH",
+    "title_sub": "Chhilke jo amrit ban gaye",
+    "end_text": "HARE KRISHNA",
+    "end_sub": "Bhagwan bhaav ke bhookhe",
+    "yt_title": "छिलकों में छुपा प्रेम! Vidur Ka Saag Part 2 🙏 #shorts",
+    "yt_description": "Vidur laute to dekha, Vidurani Prabhu ko kele ke chhilke khila rahi thin!\nKrishna ne kaha: aisa swaad chhappan bhog me bhi nahi.\nSeekh: Bhagwan bhaav ke bhookhe hain, dhan aur dikhawe ke nahi.\n#VidurKaSaag #ShriKrishna #Mahabharat #BhaktKatha #JaiShriKrishna #HareKrishna #shorts",
+    "tags": [
+     "vidur ka saag",
+     "vidur krishna",
+     "saag roti krishna",
+     "bhagwan bhaav ke bhookhe",
+     "mahabharat katha",
+     "shri krishna",
+     "bhakt katha",
+     "krishna arjun",
+     "hindi devotional shorts",
+     "hare krishna"
+    ],
+    "shots": [
+     {
+      "scene": "walk",
+      "mood": "neutral",
+      "sticker": "PICHHLI BAAR",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "कृष्ण ने छप्पन भोग ठुकराए... और विदुरानी उन्हें केले के छिलके खिला रही थीं।",
+        "caption": "Krishna ne *chhappan bhog* thukraye... aur Vidurani unhe kele ke *chhilke* khila rahi thin."
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "happy",
+      "sticker": "CHHILKE YA PREM?",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "A",
+        "hindi": "छिलके? माधव, आपने रोका क्यों नहीं?",
+        "caption": "*Chhilke?* Madhav, aapne roka kyun nahi?"
+       },
+       {
+        "speaker": "K",
+        "hindi": "पार्थ, वो छिलके नहीं थे... उनमें प्रेम भरा था। मैं मुस्कुराकर खाता रहा।",
+        "caption": "Parth, wo chhilke nahi the... unme *prem* bhara tha. Main *muskurakar* khaata raha."
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "shock",
+      "sticker": "VIDUR LAUTE",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "तभी महात्मा विदुर लौटे... दृश्य देखकर घबरा गए।",
+        "caption": "Tabhi *Mahatma Vidur* laute... drishya dekhkar *ghabra* gaye."
+       },
+       {
+        "speaker": "P",
+        "hindi": "अरे! ये क्या कर रही हो? प्रभु को छिलके खिला दिए!",
+        "caption": "Arey! Ye kya kar rahi ho? *Prabhu* ko *chhilke* khila diye!"
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "happy",
+      "sticker": "",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "K",
+        "hindi": "विदुर जी, घबराइए मत... ऐसा स्वाद दुर्योधन के छप्पन भोग में भी नहीं था।",
+        "caption": "Vidur ji, ghabraiye mat... aisa *swaad* Duryodhan ke *chhappan bhog* me bhi nahi tha."
+       }
+      ]
+     },
+     {
+      "scene": "meet",
+      "mood": "happy",
+      "sticker": "SAADA SAAG ROTI",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "P",
+        "hindi": "प्रभु, मेरे घर में बस सादा साग और रोटी है... स्वीकार कीजिए।",
+        "caption": "Prabhu, mere ghar me bas saada *saag aur roti* hai... sweekar kijiye."
+       },
+       {
+        "speaker": "N",
+        "hindi": "कृष्ण ने वो साग ऐसे खाया, जैसे अमृत हो।",
+        "caption": "Krishna ne wo saag aise khaya, jaise *amrit* ho."
+       }
+      ]
+     },
+     {
+      "scene": "divine",
+      "mood": "happy",
+      "sticker": "BHAAV KE BHOOKHE",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "K",
+        "hindi": "याद रखो, भगवान भाव के भूखे हैं... धन और दिखावे के नहीं।",
+        "caption": "Yaad rakho, Bhagwan *bhaav* ke bhookhe hain... dhan aur *dikhawe* ke nahi."
+       },
+       {
+        "speaker": "N",
+        "hindi": "बोलो, जय श्री कृष्ण!",
+        "caption": "Bolo, *Jai Shri Krishna!*"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "type": "devotional",
+  "_story": "devotional/01_vidur_ka_saag.txt",
+  "next": 1
+ },
  "last_kind": "paheli"
 }
