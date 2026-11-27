@@ -1,4 +1,289 @@
 {
- "active": null,
+ "active": {
+  "series_title": "Aam Ke Ped Ka Maalik",
+  "parts": [
+   {
+    "topic": "Do padosi ek aam ke ped par daava karte hain; suraag aur Chatur ka 'ped kaat do' aadesh",
+    "hook": "Ped ek, *maalik* do!",
+    "p_name": "Chatur",
+    "label": "CHATUR KA NYAY",
+    "title_line1": "AAM KA PED",
+    "title_line2": "KISKA HAI?",
+    "title_sub": "Chatur Ka Nyay - Part 1",
+    "end_text": "JAWAB LIKHO",
+    "end_sub": "Faisla kal Part 2 mein",
+    "yt_title": "आम का पेड़ किसका? दो मालिक, एक सच | Chatur Ka Nyay Part 1 🥭 #shorts",
+    "yt_description": "Ek aam ka ped aur do padosi, dono kehte hain ped unka hai.\nKoi gawah nahi, Raja bhi uljhan mein.\nChatur ne diya ajeeb aadesh... ped kaat do!\nAap batao, asli maalik kaun? Comment karo.\n#ChaturKaNyay #HindiKahani #Paheli #LokKatha #DarbarKaNyay #HindiStory #shorts",
+    "tags": [
+     "chatur ka nyay",
+     "hindi kahani",
+     "paheli",
+     "lok katha",
+     "aam ka ped",
+     "raja ki kahani",
+     "nyay ki kahani",
+     "jasoosi kahani",
+     "hindi shorts",
+     "moral story hindi"
+    ],
+    "shots": [
+     {
+      "scene": "darbar",
+      "mood": "shock",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "question",
+        "label": "Asli Maalik?"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "एक आम का पेड़... और दो मालिक! आख़िर पेड़ किसका है?",
+        "caption": "Ek *aam ka ped*... aur do *maalik*! Aakhir ped kiska hai?"
+       },
+       {
+        "speaker": "N",
+        "hindi": "भोला और गोपाल, दोनों पड़ोसी, दोनों कहते हैं... यह पेड़ मैंने लगाया।",
+        "caption": "Bhola aur Gopal, dono padosi, dono kehte hain... yeh ped *maine lagaya*."
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "neutral",
+      "sticker": "KOI GAWAH NAHI",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "कोई गवाह है? कोई कागज़? ...नहीं? तो मैं फ़ैसला कैसे करूँ?",
+        "caption": "Koi *gawah* hai? Koi kagaz? ...Nahi? Toh main *faisla* kaise karun?"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "neutral",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "lamp",
+        "label": "Ped Ki Chinta"
+       },
+       {
+        "icon": "coin",
+        "label": "Sirf Aam"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "भोला की आँखें बार-बार पेड़ की ओर जाती हैं... बोला, इस बार पत्ते मुरझा गए हैं।",
+        "caption": "Bhola ki aankhein baar-baar *ped* ki or jaati hain... bola, is baar *patte murjha* gaye hain."
+       },
+       {
+        "speaker": "N",
+        "hindi": "गोपाल बस गिनता रहा... सौ आम आएँगे, बाज़ार में अच्छे दाम मिलेंगे।",
+        "caption": "Gopal bas ginta raha... *sau aam* aayenge, bazaar mein achhe *daam* milenge."
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "angry",
+      "sticker": "RAJA KA SABR TOOTA",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "बस! दोनों झगड़ते ही रहोगे? चतुर, तुम ही बताओ, क्या करें?",
+        "caption": "*Bas!* Dono jhagadte hi rahoge? *Chatur*, tum hi batao, kya karein?"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "neutral",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "sword",
+        "label": "Ped Kaato!"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "C",
+        "hindi": "महाराज, सीधा उपाय है... पेड़ कटवा दीजिए, लकड़ी आधी-आधी बाँट दीजिए!",
+        "caption": "Maharaj, seedha upaay hai... *ped katwa* dijiye, lakdi *aadhi-aadhi* baant dijiye!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "shock",
+      "sticker": "",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "पूरा दरबार सन्न! क्या चतुर सच में पेड़ कटवा देगा?",
+        "caption": "Poora darbar *sann*! Kya Chatur sach mein ped *katwa* dega?"
+       },
+       {
+        "speaker": "N",
+        "hindi": "आप बताओ, असली मालिक कौन है? फ़ैसला कल पार्ट दो में!",
+        "caption": "Aap batao, *asli maalik* kaun hai? Faisla kal *Part 2* mein!"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Ped kaatne ke aadesh par dono padosiyon ki pratikriya aur Chatur ka faisla",
+    "hook": "Asli maalik ki *pehchaan*",
+    "p_name": "Chatur",
+    "label": "CHATUR KA NYAY",
+    "title_line1": "PED MAT KAATO!",
+    "title_line2": "ASLI MAALIK",
+    "title_sub": "Chatur Ka Nyay - Part 2",
+    "end_text": "JAI HO NYAY",
+    "end_sub": "Follow karo, agla case jald",
+    "yt_title": "पेड़ मत काटो! आंसुओं ने खोला राज़ | Chatur Ka Nyay Part 2 ⚖️ #shorts",
+    "yt_description": "Chatur ne kaha ped kaat do... ek muskuraya, ek ro pada.\nBas yahin khul gaya asli maalik ka raaz.\nSeekh: jo sach mein apna hota hai, uska nuksaan koi nahi dekh sakta.\n#ChaturKaNyay #HindiKahani #LokKatha #MoralStory #Paheli #HindiStory #shorts",
+    "tags": [
+     "chatur ka nyay",
+     "hindi kahani",
+     "lok katha",
+     "aam ka ped",
+     "moral story hindi",
+     "nyay ki kahani",
+     "raja aur chatur",
+     "paheli ka jawab",
+     "hindi shorts",
+     "seekh wali kahani"
+    ],
+    "shots": [
+     {
+      "scene": "darbar",
+      "mood": "neutral",
+      "sticker": "KAL KA SAWAAL",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "कल चतुर ने आदेश दिया था... आम का पेड़ काटकर आधा-आधा बाँट दो!",
+        "caption": "Kal Chatur ne aadesh diya tha... aam ka ped *kaatkar* aadha-aadha *baant* do!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "tick",
+        "label": "Gopal: Theek"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "गोपाल तुरंत मुस्कुराया... ठीक है महाराज, आधी लकड़ी ही सही!",
+        "caption": "Gopal turant *muskuraya*... theek hai Maharaj, *aadhi lakdi* hi sahi!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "sad",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "cross",
+        "label": "Mat Kaato!"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "पर भोला रो पड़ा... मत काटो! पेड़ गोपाल को दे दो, बस इसे ज़िंदा रहने दो।",
+        "caption": "Par Bhola *ro pada*... mat kaato! Ped Gopal ko de do, bas ise *zinda* rehne do."
+       },
+       {
+        "speaker": "N",
+        "hindi": "मैंने इसे बचपन से पानी दिया है।",
+        "caption": "Maine ise *bachpan* se *paani* diya hai."
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "CHAAL KAAMYAAB",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "C",
+        "hindi": "महाराज, जिसका पेड़ होता है, वह उसे कटते नहीं देख सकता।",
+        "caption": "Maharaj, jiska ped hota hai, woh use *katte* nahi *dekh sakta*."
+       },
+       {
+        "speaker": "C",
+        "hindi": "गोपाल को बस आम चाहिए थे... कल भी वह सिर्फ़ दाम गिन रहा था।",
+        "caption": "Gopal ko bas *aam* chahiye the... kal bhi woh sirf *daam* gin raha tha."
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "angry",
+      "sticker": "",
+      "cards": [
+       {
+        "icon": "crown",
+        "label": "Bhola Maalik"
+       },
+       {
+        "icon": "cross",
+        "label": "Gopal Jhootha"
+       }
+      ],
+      "lines": [
+       {
+        "speaker": "R",
+        "hindi": "फ़ैसला सुनो! पेड़ भोला का है... और गोपाल को झूठ की सज़ा मिलेगी!",
+        "caption": "Faisla suno! Ped *Bhola* ka hai... aur Gopal ko *jhooth ki saza* milegi!"
+       }
+      ]
+     },
+     {
+      "scene": "darbar",
+      "mood": "happy",
+      "sticker": "",
+      "cards": [],
+      "lines": [
+       {
+        "speaker": "N",
+        "hindi": "सीख यही... जो सच में अपना होता है, उसका नुकसान कोई नहीं देख सकता।",
+        "caption": "Seekh yahi... jo sach mein *apna* hota hai, uska *nuksaan* koi nahi dekh sakta."
+       },
+       {
+        "speaker": "N",
+        "hindi": "आपने सही पहचाना? जय हो चतुर के न्याय की!",
+        "caption": "Aapne sahi pehchana? *Jai ho* Chatur ke *nyay* ki!"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "type": "paheli",
+  "_story": "paheli/02_aam_ke_ped_ka_maalik.txt",
+  "next": 1
+ },
  "last_kind": "devotional"
 }
