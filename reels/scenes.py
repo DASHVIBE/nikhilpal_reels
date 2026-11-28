@@ -263,4 +263,6 @@ def shot_darbar(t, s):
     return img, dict(zoom=z * lerp(1.0, 1.05, e), cx=cx, cy=cy)
 
 
-SHOTS = dict(walk=shot_walk, meet=shot_meet, divine=shot_divine, darbar=shot_darbar)
+from .comedy import shot_comedy
+_comedy = lambda t, s: shot_comedy(t, s, talk)
+SHOTS = dict(walk=shot_walk, meet=shot_meet, divine=shot_divine, darbar=shot_darbar, gali=_comedy, ghar=_comedy, dukaan=_comedy)

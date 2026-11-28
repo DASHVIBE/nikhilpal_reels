@@ -1,0 +1,130 @@
+{
+ "type": "comedy",
+ "series_title": "Sardi Mein Nahana",
+ "parts": [
+  {
+   "style": "doodle",
+   "topic": "Kadaake ki thand mein Mama nahane se bach rahe hain",
+   "hook": "Mama Ka *Shortcut*",
+   "p_name": "Chintu",
+   "label": "CHINTU AUR MAMA",
+   "title_line1": "Sardi Mein",
+   "title_line2": "Nahana?",
+   "title_sub": "Mama vs thanda paani",
+   "end_text": "HAHAHA!",
+   "end_sub": "Aisa mama sabka hota hai",
+   "yt_title": "सर्दी में नहाना? मामा का शॉर्टकट 😂 Chintu Aur Mama #shorts",
+   "yt_description": "Kadaake ki thand aur Mama ka sabse bada dushman... paani!\nAapke ghar mein bhi aisa koi hai? Tag karo.\n#comedy #sardi #winter #funny #chintuaurmama #hindicomedy #shorts",
+   "tags": [
+    "chintu aur mama",
+    "sardi comedy",
+    "winter funny",
+    "nahana comedy",
+    "hindi comedy",
+    "desi comedy",
+    "cartoon comedy",
+    "shorts"
+   ],
+   "shots": [
+    {
+     "scene": "ghar",
+     "mood": "neutral",
+     "react": "neutral",
+     "sticker": "DECEMBER 6 BAJE",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "N",
+       "hindi": "दिसंबर की कड़ाके की ठंड... और मामा का सबसे बड़ा दुश्मन, पानी।",
+       "caption": "December ki thand... aur Mama ka sabse bada dushman: *paani*!"
+      }
+     ]
+    },
+    {
+     "scene": "ghar",
+     "mood": "neutral",
+     "react": "neutral",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "T",
+       "hindi": "मामा, आज तो नहा लो, पूरे तीन दिन हो गए।",
+       "caption": "Mama, aaj to naha lo, *teen din* ho gaye!"
+      }
+     ]
+    },
+    {
+     "scene": "ghar",
+     "mood": "angry",
+     "react": "shock",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "M",
+       "hindi": "तीन दिन? मैं तो हफ़्ते में एक बार नहाता हूँ, वो भी फ़ोटो के लिए!",
+       "caption": "Main hafte mein ek baar nahata hoon... wo bhi *photo* ke liye!"
+      }
+     ]
+    },
+    {
+     "scene": "ghar",
+     "mood": "happy",
+     "react": "neutral",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "Y",
+       "hindi": "मामा, गीज़र चालू कर दिया है। गरम पानी तैयार है!",
+       "caption": "Mama, geyser chalu hai! *Garam paani* taiyaar!"
+      }
+     ]
+    },
+    {
+     "scene": "ghar",
+     "mood": "shock",
+     "react": "happy",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "M",
+       "hindi": "गीज़र चालू? बिजली का बिल कौन भरेगा, तेरे पापा?",
+       "caption": "Geyser chalu? *Bijli ka bill* kaun bharega?"
+      }
+     ]
+    },
+    {
+     "scene": "ghar",
+     "mood": "happy",
+     "react": "shock",
+     "sticker": "MAMA HACK",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "M",
+       "hindi": "सुनो, नहाने का असली शॉर्टकट है... डियो की पूरी बोतल!",
+       "caption": "Nahane ka asli *shortcut*: deo ki poori bottle!"
+      }
+     ]
+    },
+    {
+     "scene": "ghar",
+     "mood": "sad",
+     "react": "happy",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "T",
+       "hindi": "इसीलिए मामा, बस में कोई आपके पास नहीं बैठता।",
+       "caption": "Isiliye Mama, bus mein koi *paas nahi* baithta!"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

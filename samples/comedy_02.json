@@ -1,0 +1,130 @@
+{
+ "type": "comedy",
+ "series_title": "Teen Shaadi Ek Din",
+ "parts": [
+  {
+   "style": "desi",
+   "topic": "Shaadi season mein Mama bina bulaye teen shaadiyon mein khaana khaane nikle",
+   "hook": "Bina *Invite* Shaadi",
+   "p_name": "Chintu",
+   "label": "CHINTU AUR MAMA",
+   "title_line1": "Teen Shaadi",
+   "title_line2": "Ek Din",
+   "title_sub": "Mama ka buffet plan",
+   "end_text": "HAHAHA!",
+   "end_sub": "Comment mein mama ko tag karo",
+   "yt_title": "बिना बुलाए 3 शादियों में खाना? मामा पकड़े गए 😂 Chintu Aur Mama #shorts",
+   "yt_description": "Shaadi season hai aur Mama ka plan taiyaar: teen shaadi, teeno mein khaana!\nPar halwai ko kaun bhoola tha? 😂\n#comedy #shaadiseason #wedding #funny #chintuaurmama #hindicomedy #shorts",
+   "tags": [
+    "chintu aur mama",
+    "shaadi comedy",
+    "wedding season funny",
+    "buffet comedy",
+    "hindi comedy",
+    "desi comedy",
+    "cartoon comedy",
+    "shorts"
+   ],
+   "shots": [
+    {
+     "scene": "gali",
+     "mood": "neutral",
+     "react": "neutral",
+     "sticker": "SHAADI SEASON",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "N",
+       "hindi": "शादियों का सीज़न चल रहा है, और मामा का प्लान तैयार है।",
+       "caption": "Shaadiyon ka season... aur Mama ka *plan* taiyaar!"
+      }
+     ]
+    },
+    {
+     "scene": "gali",
+     "mood": "happy",
+     "react": "shock",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "M",
+       "hindi": "चिंटू, आज तीन शादियाँ हैं, और तीनों में खाना खाएँगे!",
+       "caption": "Chintu, aaj *teen shaadiyan* hain, teeno mein khaana!"
+      }
+     ]
+    },
+    {
+     "scene": "gali",
+     "mood": "shock",
+     "react": "neutral",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "T",
+       "hindi": "पर मामा, बुलाया तो हमें किसी ने भी नहीं!",
+       "caption": "Par Mama, *bulaya* to kisi ne bhi nahi!"
+      }
+     ]
+    },
+    {
+     "scene": "gali",
+     "mood": "neutral",
+     "react": "sad",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "M",
+       "hindi": "बेटा, शादी में कोई नहीं पूछता। बस सूट पहनो, और मुस्कुराते रहो।",
+       "caption": "Bas *suit* pehno aur muskurate raho!"
+      }
+     ]
+    },
+    {
+     "scene": "gali",
+     "mood": "happy",
+     "react": "shock",
+     "sticker": "PLOT TWIST",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "Y",
+       "hindi": "मामा, तीनों शादियों में खाना एक ही हलवाई बना रहा है... जिसके पैसे आपने अब तक नहीं दिए!",
+       "caption": "Teeno shaadiyon ka *halwai* wahi... jiske paise aapne nahi diye!"
+      }
+     ]
+    },
+    {
+     "scene": "gali",
+     "mood": "shock",
+     "react": "happy",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "M",
+       "hindi": "क्या? गुप्ता हलवाई? चलो चिंटू, आज घर पे खिचड़ी!",
+       "caption": "Gupta halwai? Chalo Chintu, aaj ghar pe *khichdi*!"
+      }
+     ]
+    },
+    {
+     "scene": "gali",
+     "mood": "happy",
+     "react": "sad",
+     "sticker": "",
+     "cards": [],
+     "lines": [
+      {
+       "speaker": "T",
+       "hindi": "मामा, आज खाना नहीं मिलेगा, पर हिसाब ज़रूर मिलेगा!",
+       "caption": "Aaj khaana nahi... *hisaab* zaroor milega!"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -17,9 +17,10 @@ LINE = {"type": "object", "additionalProperties": False, "required": ["speaker",
                        "hindi": _str, "caption": _str}}
 CARD = {"type": "object", "additionalProperties": False, "required": ["icon", "label"],
         "properties": {"icon": {"type": "string", "enum": list(ICONS)}, "label": _str}}
-SHOT = {"type": "object", "additionalProperties": False, "required": ["scene", "mood", "sticker", "cards", "lines"],
+SHOT = {"type": "object", "additionalProperties": False, "required": ["scene", "mood", "react", "sticker", "cards", "lines"],
         "properties": {"scene": {"type": "string", "enum": [s for f in FORMATS.values() for s in f["scenes"]]},
-                       "mood": {"type": "string", "enum": list(MOODS)}, "sticker": _str,
+                       "mood": {"type": "string", "enum": list(MOODS)}, "react": {"type": "string", "enum": list(MOODS)},
+                       "sticker": _str,
                        "cards": {"type": "array", "items": CARD}, "lines": {"type": "array", "items": LINE}}}
 TEXT_FIELDS = ["topic", "hook", "p_name", "label", "title_line1", "title_line2", "title_sub",
                "end_text", "end_sub", "yt_title", "yt_description"]
@@ -64,10 +65,30 @@ FORMAT_TEXT = {
   Open with a "Kya aap jaante ho...?" style question. Every part except the last ends on a turning point and
   "Aage kya hua? Part <n> kal!". Later parts open with a one-line recap.
   Keep the real names, events and message of the source. Paraphrase; never invent verse numbers or quotes.""",
+    "comedy": """FORMAT "comedy" = "CHINTU AUR MAMA" - a funny everyday desi situation, built on TODAY'S trending topic. Exactly 1 part
+  (a complete joke in one reel, 30-45 seconds).
+  Characters (cartoon, family-friendly):
+    T = Chintu: early 20s, cheeky, quick one-liners, always on his phone, roasts Mama lovingly.
+    M = Mama: Chintu's middle-aged maternal uncle, old-school, kanjoos (stingy), over-confident, full of "jugaad" ideas that backfire.
+    Y = Pinki: Chintu's younger sister, sharp and practical, often delivers the twist.
+    N = narrator: only for a short first line that sets the scene (optional).
+  Scenes: gali - their colony street;  ghar - their living room (TV, sofa, ceiling fan);  dukaan - a kirana shop.
+    Two characters are on screen in every shot; the camera cuts to whoever speaks. One scene per reel is best.
+  Shape: setup in the first line (a hook) -> Mama's plan or claim -> escalation -> a twist -> a punchline in the LAST line
+    (the last line must be the funniest: a roast, a reversal or a callback).
+  Humour: observational, relatable middle-class Indian life (sardi, shaadi season, exams, cricket match, petrol prices,
+    online sale, monsoon, festival shopping, gym resolution, a viral trend ...). Clean: no insults about looks, caste, religion,
+    gender or region; no adult jokes; no politics; no real people, celebrities or brands by name.
+  "mood" = the main speaker's face, "react" = the listener's face (happy = laughing, shock, angry, sad = facepalm, neutral).
+    Big contrasts are funny: Mama happy while Chintu is shocked; Mama shocked at the punchline.
+  p_name: "Chintu". label: "CHINTU AUR MAMA". end_text: "HAHAHA!" or "TAG KARO" (max 14); end_sub like
+    "Aisa mama sabka hota hai". yt_title: no "Part"; a funny question or claim with one emoji, ends with " #shorts".
+  cards: always []. sticker: a short reaction in at most two shots ("PLOT TWIST", "MAMA HACK", "BHAI WAH").""",
 }
 
 RULES = """Writing rules (per part):
-- 5 to 6 shots; 1 to 2 lines per shot; 80-105 spoken Hindi words in total. Each line at most 16 words.
+- 5 to 6 shots (comedy: 5 to 8); 1 to 2 lines per shot; 80-105 spoken Hindi words in total (comedy: 50-85). Each line at most 16 words.
+- "react": the listener's face in that shot (comedy only; "neutral" in the other formats).
 - The first line is a strong hook. Keep the drama high: stakes, surprise, reactions.
 - "hindi": natural spoken Hindi in Devanagari for text-to-speech: commas and "..." for pauses, numbers as words, no emojis.
 - "caption": the same line in Roman Hinglish. Wrap 1-3 key words in *asterisks* (always in pairs) to highlight them.
@@ -126,7 +147,7 @@ def trending(youtube=None, limit=15):
     return [t for t in out if t]
 
 
-def build_request(kind, date_str, trends, recent_titles, story):
+def build_request(kind, date_str, trends, recent_titles, story, topic=""):
     msg = f"Today is {date_str} (India). Write a new series in the \"{kind}\" format.\n\n"
     if story:
         msg += ("The channel owner gave this story. Base the series on it: keep its message and key moments, and split it into "
@@ -138,21 +159,24 @@ def build_request(kind, date_str, trends, recent_titles, story):
     style = _read(os.path.join(REF, "style.md"))
     if style:
         msg += f"Channel owner's style notes (follow them unless they break the rules):\n<notes>\n{style[:3000]}\n</notes>\n\n"
+    if topic:
+        msg += ("Build the joke on this trending topic from this morning's research (use the everyday situation, "
+                f"never real names or news details):\n<topic>\n{topic}\n</topic>\n\n")
     msg += ("Trending in India today (optional inspiration only):\n- " + "\n- ".join(trends[:25] or ["(none)"]) +
             "\n\nRecent titles to avoid repeating:\n- " + "\n- ".join(recent_titles[-30:] or ["(none)"]))
     return msg
 
 
-def write_series(kind, date_str, trends, recent_titles, used_stories=()):
-    """Returns {series_title, type, parts:[...], _story?}."""
-    story_name, story = next_story(kind, set(used_stories))
+def write_series(kind, date_str, trends, recent_titles, used_stories=(), topic=""):
+    """Returns {series_title, type, parts:[...], _story?}. topic: today's trend for a comedy reel."""
+    story_name, story = next_story(kind, set(used_stories)) if kind != "comedy" else (None, "")
     system = "\n\n".join([INTRO, FORMAT_TEXT[kind], RULES])
-    request = build_request(kind, date_str, trends, recent_titles, story)
+    request = build_request(kind, date_str, trends, recent_titles, story, topic)
     use_api = bool("".join(os.environ.get("ANTHROPIC_API_KEY", "").split()))
     problem = ""
     for attempt in range(2):                       # one more try if the series comes back incomplete
         ask = request + (f"\n\nYour previous answer was rejected: {problem}. Fix that." if problem else "")
-        data = _via_api(system, ask) if use_api else _via_cli(system, ask, research=not story and attempt == 0)
+        data = _via_api(system, ask) if use_api else _via_cli(system, ask, research=not story and kind != "comedy" and attempt == 0)
         parts = [p for p in data.get("parts", []) if p.get("shots")][:FORMATS[kind]["parts"]]
         problem = check_series(kind, parts)
         if not problem: break
@@ -174,25 +198,25 @@ def check_series(kind, parts):
         if len(p.get("shots", [])) < 4 or len(lines) < 4:
             return f"part {i} is too short ({len(p.get('shots', []))} shots, {len(lines)} lines)"
         words = sum(len(l["hindi"].split()) for l in lines)
-        if words > 140:
-            return f"part {i} has {words} spoken words, the limit is 105"
+        if words > (110 if kind == "comedy" else 140):
+            return f"part {i} has {words} spoken words, the limit is {85 if kind == 'comedy' else 105}"
     return ""
 
 
 # ---------------------------------------------------------------- Claude Code CLI (subscription)
-def _via_cli(system, request, research=True):
+def _via_cli(system, request, research=True, schema=None, research_text=None):
     exe = shutil.which("claude")
     if not exe:
         raise RuntimeError("Claude Code CLI not found (npm install -g @anthropic-ai/claude-code)")
     if not os.environ.get("CLAUDE_CODE_OAUTH_TOKEN", "").strip():
         raise RuntimeError("Neither ANTHROPIC_API_KEY nor CLAUDE_CODE_OAUTH_TOKEN is set")
-    ask = "\n\nReply only with the JSON object for the whole series."
+    ask = "\n\nReply only with the JSON object."
     attempts = ([(MODEL, True)] if research else []) + [(MODEL, False), (FALLBACK_MODEL, False)]
     errors = []
     for model, web in attempts:     # research on the web -> write from memory -> another model
-        prompt = system + "\n\n---\n\n" + request + ("\n\n" + RESEARCH if web else "") + ask
+        prompt = system + "\n\n---\n\n" + request + ("\n\n" + (research_text or RESEARCH) if web else "") + ask
         try:
-            return _run_cli(exe, model, prompt, web)
+            return _run_cli(exe, model, prompt, web, schema or SCHEMA)
         except Exception as e:
             print(f"claude CLI ({model}, web={web}) failed: {e}", flush=True)
             errors.append(f"{model} web={web}: {e}")
@@ -211,12 +235,12 @@ def _cli_env():
     return env
 
 
-def _run_cli(exe, model, prompt, web):
+def _run_cli(exe, model, prompt, web, schema):
     # The prompt goes through stdin (on Windows a multi-line argument is cut at the first newline).
     # Only web search/fetch tools, never files or shell; run outside the repo.
     tools = ["--tools", "WebSearch,WebFetch", "--allowedTools", "WebSearch", "WebFetch"] if web else ["--tools", ""]
     cmd = [exe, "-p", "--model", model, "--output-format", "json", *tools,
-           "--json-schema", json.dumps(SCHEMA), "--max-turns", "14" if web else "3"]
+           "--json-schema", json.dumps(schema), "--max-turns", "14" if web else "3"]
     r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, encoding="utf-8",
                        timeout=1200, cwd=tempfile.gettempdir(), env=_cli_env())
     if r.returncode != 0:
@@ -231,12 +255,12 @@ def _run_cli(exe, model, prompt, web):
 
 
 # ---------------------------------------------------------------- Claude API (pay-as-you-go)
-def _via_api(system, request):
+def _via_api(system, request, schema=None):
     import anthropic   # imported lazily: only needed on this path
     resp = anthropic.Anthropic().beta.messages.create(
         model=MODEL, max_tokens=16000, betas=["server-side-fallback-2026-07-01"], fallbacks="default",
         system=system, messages=[{"role": "user", "content": request}],
-        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": SCHEMA}},
+        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": schema or SCHEMA}},
     )
     if resp.stop_reason == "refusal":
         raise RuntimeError(f"series request refused: {getattr(resp, 'stop_details', None)}")

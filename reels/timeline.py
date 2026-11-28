@@ -20,7 +20,7 @@ def _main_speaker(lines):
 def clean_script(script):
     """Clamp a script to what the renderer can draw. Returns a new dict with render-ready shots."""
     kind = script["type"]; fmt = FORMATS[kind]
-    shots = []
+    shots = []; cast = prev_cast = ()
     for raw in script["shots"]:
         scene = raw.get("scene") if raw.get("scene") in fmt["scenes"] else fmt["default_scene"]
         mood = raw.get("mood") if raw.get("mood") in MOODS else "neutral"
@@ -48,12 +48,35 @@ def clean_script(script):
             cam = {"A": "a", "P": "p", "K": "k"}.get(top, "wide" if first else "ka")
             pm = {"sad": "sad", "happy": "happy"}.get(mood, "listen")
             sh.update(cam=cam, pmood=pm, arrive=first and cam == "wide", alook=1 if top == "A" else -1, klook=1)
+        elif kind == "comedy":
+            cast, focus = comedy_cast(lines, cast)
+            spk = {l[0] for l in lines if l[0] != "N"}
+            cam = "wide" if (not shots or focus is None or len(spk) > 1 or len(shots) == len(script["shots"]) - 1) else focus
+            sh.update(style=script.get("style", "desi"), cast=cast, focus=focus, cam=cam, mood=mood,
+                      react=raw.get("react") if raw.get("react") in MOODS else "neutral",
+                      enter=next((c for c in cast if c not in prev_cast), None) if shots else None)
+        prev_cast = sh.get("cast", ())
         shots.append(sh)
     if not shots:
         raise ValueError("script has no usable shots")
     shots[0]["lead"] = 1.6     # room for the title card
     shots[-1]["tail"] = 3.6    # room for the end card
     return dict(script, shots=shots)
+
+
+COMEDY_ORDER = ("T", "M", "Y")
+
+
+def comedy_cast(lines, last):
+    """-> (two characters on screen, left to right; the main speaker or None). Keeps the last partner when only
+    one of them speaks."""
+    spk = [l[0] for l in lines if l[0] != "N"]
+    ranked = sorted(set(spk), key=lambda c: -spk.count(c))[:2]
+    focus = ranked[0] if ranked else None
+    for c in list(last) + list(COMEDY_ORDER):
+        if len(ranked) >= 2: break
+        if c not in ranked: ranked.append(c)
+    return tuple(sorted(ranked, key=COMEDY_ORDER.index)), focus
 
 
 def build_timeline(script, voice_dir):

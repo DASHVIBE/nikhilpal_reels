@@ -138,9 +138,46 @@ def thump(d=0.35):
     tq = tarr(d); return np.sin(2*np.pi*(52 + 30*np.exp(-tq*30))*tq) * np.exp(-tq*12) * np.minimum(1, tq / 0.003)
 
 
+MAJ = [261.63, 293.66, 329.63, 392.0, 440.0, 523.25, 587.33, 659.26]
+
+
+def bouncy(n, total, seed):
+    """Comedy bed: a light plucked bass + skipping melody on a swing beat with a soft shaker."""
+    rng = random.Random(seed); out = np.zeros(n); beat = 0.36; cache = {}
+    def note(f, d=0.5, b=0.6):
+        if (f, d) not in cache: cache[(f, d)] = pluck(f, d, b)
+        return cache[(f, d)]
+    bass = [130.81, 98.0, 110.0, 87.31]; idx = 3; t0 = 0.25; i = 0
+    while t0 < total:
+        if i % 2 == 0: add(out, t0, note(bass[(i // 8) % 4], 0.6, 0.3), 0.9)          # oom
+        else: add(out, t0, tick(0.05), 0.25)                                            # pah (shaker)
+        if rng.random() < 0.55:
+            idx = max(0, min(len(MAJ) - 1, idx + rng.choice([-2, -1, 1, 1, 2])))
+            add(out, t0 + (beat * 0.66 if rng.random() < 0.4 else 0), note(MAJ[idx], 0.4, 0.8), 0.45)
+        t0 += beat; i += 1
+    return out / (np.max(np.abs(out)) + 1e-9)
+
+
+def boing(d=0.45):
+    t = tarr(d); f = 180 + 260 * np.exp(-t * 7) * (1 + 0.35 * np.sin(2 * np.pi * 14 * t))
+    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 6) * np.minimum(1, t / 0.004)
+
+
+def rimshot():
+    """ba-dum-tss: two drum hits and a cymbal, for the punchline"""
+    out = np.zeros(int(1.6 * SR))
+    tq = tarr(0.25); tom = lambda f: np.sin(2 * np.pi * f * tq) * np.exp(-tq * 18)
+    add(out, 0.0, tom(180), 0.8); add(out, 0.16, tom(130), 0.8)
+    tc = tarr(1.2); add(out, 0.36, band(noise(1.2), 5000, 12000) * np.exp(-tc * 3.5), 0.5)
+    return out
+
+
 def music_bed(kind, n, total, seed):
-    """Background music: ticking clock + heartbeat pulse over a low drone (paheli) or harmonium + santoor (katha)."""
+    """Background music: ticking clock + heartbeat pulse over a low drone (paheli), harmonium + santoor (katha),
+    or a bouncy plucked tune (comedy)."""
     bed = np.zeros(n)
+    if kind == "comedy":
+        return bouncy(n, total, seed)
     if kind == "paheli":
         t0 = 0.5
         while t0 < total:
@@ -158,6 +195,9 @@ def shot_sfx(sfx, bed, s, first, rng):
     if not first:
         sw = band(noise(0.5), 900, 7000) * np.hanning(int(0.5 * SR)) * np.linspace(0.3, 1, int(0.5 * SR))
         add(sfx, st - 0.45, sw, 0.07)
+    if kd in ("gali", "ghar", "dukaan"):                 # comedy: a boing when someone is shocked
+        if s.get("mood") == "shock" or s.get("react") == "shock": add(sfx, st + 0.05, boing(), 0.35)
+        if s.get("enter"): add(sfx, st + 0.05, sweep(500, 1400, 0.5, 3), 0.12)
     if kd == "darbar":                                   # deep drum hit
         add(sfx, st + 0.05, thump(), 0.4); add(sfx, st + 0.3, thump(), 0.3)
     if kd == "divine":                                   # warm chord + sparkle
@@ -187,9 +227,13 @@ def build_audio(tl, voices, path, seed):
     for si, s in enumerate(tl["shots"]):
         shot_sfx(sfx, bed, s, si == 0, rng)
     last = tl["shots"][-1]
-    add(sfx, 0.12, bell(392, 5.0), 0.35)                             # opening temple bell (lower, longer)
-    add(sfx, tl["phrases"][-1]["start"], pluck(523.25, 2.0), 0.5)    # last line: one santoor note
-    add(sfx, last["start"] + last["narr_end"] + 0.4, bell(587, 3.0), 0.25)   # end card
+    if tl.get("type") == "comedy":
+        add(sfx, 0.12, sweep(400, 1200, 0.35, 6), 0.25)                       # opening pop
+        add(sfx, tl["phrases"][-1]["end"] + 0.1, rimshot(), 0.55)             # punchline: ba-dum-tss
+    else:
+        add(sfx, 0.12, bell(392, 5.0), 0.35)                             # opening temple bell (lower, longer)
+        add(sfx, tl["phrases"][-1]["start"], pluck(523.25, 2.0), 0.5)    # last line: one santoor note
+        add(sfx, last["start"] + last["narr_end"] + 0.4, bell(587, 3.0), 0.25)   # end card
 
     # duck the music under the voice, fade in/out, normalise
     a = np.abs(voice); k = int(0.25 * SR); cs = np.cumsum(np.concatenate([[0], a]))

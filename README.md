@@ -3,7 +3,12 @@
 Roz **3 Hindi cartoon Shorts** apne aap bante hain aur YouTube par **12 PM, 4 PM aur 7 PM (IST)** publish hote hain.
 GitHub Actions par chalta hai, laptop on rakhne ki zaroorat nahi.
 
-- **Series mein kahaniyan**, roz ek part:
+- **12 PM aur 4 PM: Chintu Aur Mama** (`comedy`): us din ke trending topic par ek poora mazedaar reel (30-45 s).
+  Chintu (shaitaan bhanja), Mama (kanjoos, jugaadu), Pinki (tez behen). Do look baari-baari:
+  **doodle** (grey kagaz, bada safed sar, dandi body) aur **desi** (wahi chehre, rang bhare kurte aur gali/ghar/dukaan).
+- **Subah ~4:30 baje trend research**: Claude web par dekhta hai aaj India me kya chal raha hai (mausam, tyohar, match,
+  sale, viral trend) aur din ke comedy topic chunta hai (`state/trends.json`). Politics, dharm, haadse, asli log: kabhi nahi.
+- **7 PM: katha**, series mein roz ek part:
   - **Chatur Ka Nyay** (`paheli`): darbar ka jaasoosi case (chori, jhootha daava, bantwara). Part 1 mein case + suraag,
     Part 2 mein Chatur ki chaal aur faisla. 2 parts.
   - **Bhakt Katha** (`devotional`): asli bhakton ki kathayein (Pundalik, Sudama, Vidur ...) aur Mahabharat ke anjaane raaz,
@@ -20,14 +25,16 @@ Bangers titles, iris transition, harmonium + santoor music, kone me `NIKHIL PAL`
 ## Roz kya hota hai
 
 ```
+Subah 4 baje ke baad pehla run: aaj ki trend research (state/trends.json)
 Har ghante GitHub check karta hai: koi slot (12 PM / 4 PM / 7 PM) 3 ghante mein hai ya chhoot gaya?  ── haan ──►
-  ├─ state/series.json mein chal rahi series ka agla part?  ── nahi ──► Claude se nayi series (sab parts)
+  ├─ 12 PM / 4 PM: aaj ke agle trending topic par Claude se comedy reel (doodle aur desi baari-baari)
+  ├─ 7 PM: state/series.json mein chal rahi katha ka agla part?  ── nahi ──► Claude se nayi series (sab parts)
   ├─ awaaz (edge-tts) → animation → reel.mp4
   ├─ YouTube upload, 3 ghante baad publish (12 PM / 4 PM / 7 PM)
   └─ state/ commit (history, series, aur fail hua ho to last_error.txt)
 ```
-Claude fail ho jaye to `samples/` ki series use hoti hai (har format ki 2: Pundalik Ki Eent, Barbarik Ka Sheesh Daan,
-Jaadui Lakdi Ka Nyay, Thaili Kiski?), taaki us din ki video na chhoote. Claude ki adhoori script dobara likhwayi jaati hai.
+Claude fail ho jaye to `samples/` ki series use hoti hai (har format ki 2: Sardi Mein Nahana, Teen Shaadi Ek Din,
+Pundalik Ki Eent, Barbarik Ka Sheesh Daan, Jaadui Lakdi Ka Nyay, Thaili Kiski?), taaki us din ki video na chhoote. Claude ki adhoori script dobara likhwayi jaati hai.
 YouTube secrets na hon to scheduled run chupchaap ruk jaata hai (fail email nahi aata).
 
 ## Code ka naksha (`reels/`)
@@ -35,7 +42,9 @@ YouTube secrets na hon to scheduled run chupchaap ruk jaata hai (fail email nahi
 | File | Kaam |
 |---|---|
 | `config.py` | **Saari settings**: video size, voices, caption names, aur dono formats ke rules |
-| `pipeline.py` | Roz ka run: aaj ka part chuno → render → upload → state save |
+| `pipeline.py` | Roz ka run: slot ke hisaab se comedy ya katha → render → upload → state save |
+| `trends.py` | Subah ki trend research (Claude + web search) → `state/trends.json` |
+| `comedy.py` | Comedy ke characters (Chintu, Mama, Pinki), dono look, gali / ghar / dukaan |
 | `writer.py` | Claude ko prompt + JSON schema; poori series likhwata hai |
 | `timeline.py` | Script ko render-ready banata hai: camera, mood, awaaz, timing |
 | `render.py` | Har frame jodta hai (shot + overlays) aur ffmpeg se mp4 banata hai |

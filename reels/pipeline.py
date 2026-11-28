@@ -1,16 +1,17 @@
 """
-Daily run:  today's part of the active series -> render -> YouTube upload -> save state.
+Daily run:  pick what this slot posts -> write or continue the script -> render -> YouTube upload -> save state.
 
-A series has 2-3 parts and one part is posted per day. When a series ends, the next one is the other format
-(paheli <-> devotional). The active series lives in state/series.json, so all parts of a story stay consistent.
+Every day (see config.SLOT_KIND): two comedy reels built on the morning's trend research (state/trends.json, looks
+alternate doodle <-> desi) and one katha part. A katha series has 2-3 parts, one part per day; when it ends the next one
+is the other katha format (paheli <-> devotional). The active series lives in state/series.json.
 
     python -m reels.pipeline                                            # daily run (needs the secrets in env)
     python -m reels.pipeline --no-upload                                # test: render today's part, upload nothing
     python -m reels.pipeline --script samples/nyay_01.json --part 2 --preview
 """
 import os, sys, json, glob, argparse, random, datetime as dt
-from .config import ROOT, OUT, STATE, FORMATS, KINDS
-from . import timeline, render, writer, youtube
+from .config import ROOT, OUT, STATE, FORMATS, KINDS, KATHA_KINDS, COMEDY_STYLES, SLOT_KIND
+from . import timeline, render, writer, youtube, trends as trendmod
 
 HISTORY = os.path.join(STATE, "history.json")        # every uploaded video
 SERIES = os.path.join(STATE, "series.json")          # {"active": series + "next" part index, "last_kind": ...}
@@ -39,7 +40,7 @@ def as_series(d):
 def sample_series(kind, history):
     """Backup when Claude fails: a sample series of this kind, preferring one not posted yet."""
     pool = [as_series(load(p, {})) for p in sorted(glob.glob(os.path.join(ROOT, "samples", "*.json")))]
-    pool = [s for s in pool if s.get("type") == kind] or [s for s in pool if s.get("type") in KINDS]
+    pool = [s for s in pool if s.get("type") == kind] or [s for s in pool if s.get("type") in KATHA_KINDS]
     used = {h.get("series") for h in history}
     return random.choice([s for s in pool if s.get("series_title") not in used] or pool)
 
@@ -50,20 +51,31 @@ def warn(title, msg):
         print(f"::warning title={title}::{msg}", flush=True)
 
 
-def new_series(kind, today, history, yt):
+def new_series(kind, today, history, yt, topic=""):
     trends = writer.trending(yt)
-    log(f"writing a new {kind} series ({len(trends)} trending titles)")
+    log(f"writing a new {kind} series ({len(trends)} trending titles)" + (f", topic: {topic.splitlines()[0]}" if topic else ""))
     try:
         series = writer.write_series(kind, today.strftime("%d %B %Y, %A"), trends, [h.get("title", "") for h in history],
-                                     [h["story"] for h in history if h.get("story")])
+                                     [h["story"] for h in history if h.get("story")], topic)
         if series.get("_story"): log("based on owner story:", series["_story"])
         if os.path.exists(LAST_ERROR): os.remove(LAST_ERROR)
     except Exception as e:
         log("Claude failed, using a sample series:", repr(e))
         warn("Claude script failed, sample used", repr(e))
         open(LAST_ERROR, "w", encoding="utf-8").write(f"{dt.datetime.now(IST):%Y-%m-%d %H:%M} IST\n{e}\n")
-        series = sample_series(kind, history)
+        series = dict(sample_series(kind, history), _sample=True)
     return dict(series, next=0)
+
+
+def comedy_reel(today, history, yt):
+    """A one-part comedy 'series' on the next unused trend topic, in the look that is due."""
+    n = sum(1 for h in history if h.get("type") == "comedy")
+    ti, topic = trendmod.next_topic()
+    series = new_series("comedy", today, history, yt, topic)
+    style = COMEDY_STYLES[n % len(COMEDY_STYLES)]
+    for p in series["parts"]: p.setdefault("style", style)
+    if not series.get("_sample"): series["_topic"] = ti
+    return series
 
 
 def todays_part(a, state, history, today, yt):
@@ -71,14 +83,17 @@ def todays_part(a, state, history, today, yt):
     if a.script:
         series = as_series(load(a.script, {}))
         return series, max(0, min(a.part, len(series["parts"])) - 1), False
+    want = a.type if a.type in KINDS else SLOT_KIND.get(a.slot, "katha")
+    if want == "comedy":
+        return comedy_reel(today, history, yt), 0, False
     series = state.get("active")
-    if a.type in KINDS and series and series.get("type") != a.type:
+    if a.type in KATHA_KINDS and series and series.get("type") != a.type:
         series = None                                           # a different format was asked for
     if not series or series.get("next", 0) >= len(series.get("parts", [])):
         last = state.get("last_kind")
-        if a.type in KINDS: kind = a.type
-        elif last in KINDS: kind = KINDS[(KINDS.index(last) + 1) % len(KINDS)]      # take turns
-        else: kind = KINDS[0]
+        if a.type in KATHA_KINDS: kind = a.type
+        elif last in KATHA_KINDS: kind = KATHA_KINDS[(KATHA_KINDS.index(last) + 1) % len(KATHA_KINDS)]      # take turns
+        else: kind = KATHA_KINDS[0]
         series = new_series(kind, today, history, yt)
         state["active"] = series
         save(SERIES, state)          # saved on test runs too, so the next real run posts this same Part 1
@@ -133,7 +148,9 @@ def main():
     entry = dict(date=str(today), slot=a.slot, type=kind, series=series.get("series_title"), part=f"{idx + 1}/{n}",
                  title=script["yt_title"], seconds=round(tl["total"], 1), video_id=vid)
     if series.get("_story"): entry["story"] = series["_story"]
+    if kind == "comedy": entry["style"] = part.get("style")
     save(HISTORY, (history + [entry])[-200:])
+    if series.get("_topic") is not None: trendmod.mark_used(series["_topic"])
     if from_state:
         series["next"] = idx + 1
         if series["next"] >= n: state.update(active=None, last_kind=kind)    # series finished

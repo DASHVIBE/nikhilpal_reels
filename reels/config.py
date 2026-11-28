@@ -30,11 +30,15 @@ VOICES = {
     "P": ("hi-IN-MadhurNeural", "-4%", "-13Hz"),   # ordinary man (devotee, villager)
     "R": ("hi-IN-MadhurNeural", "-10%", "-18Hz"),  # Raja
     "C": ("hi-IN-MadhurNeural", "+8%", "+4Hz"),    # Chatur, the clever man
+    "T": ("hi-IN-MadhurNeural", "+14%", "+12Hz"),  # Chintu: young, quick, cheeky
+    "M": ("hi-IN-MadhurNeural", "-4%", "-16Hz"),   # Mama: older, heavy, old-school
+    "Y": ("hi-IN-SwaraNeural", "+8%", "+4Hz"),     # Pinki: Chintu's sharp sister
 }
 # caption tag shown above a character's lines: (default name, colour). The narrator has no tag.
 TAGS = {"K": ("Shri Krishna", (40, 96, 190)), "A": ("Arjun", (24, 118, 126)), "P": ("Bhakt", (82, 94, 152)),
-        "R": ("Raja", (94, 38, 134)), "C": ("Chatur", (40, 130, 86))}
-BLINK_OFF = dict(K=0.0, A=1.3, P=2.2, R=0.5, C=1.8, G=2.9)   # so characters don't blink in sync
+        "R": ("Raja", (94, 38, 134)), "C": ("Chatur", (40, 130, 86)),
+        "T": ("Chintu", (24, 140, 146)), "M": ("Mama", (176, 110, 30)), "Y": ("Pinki", (200, 60, 120))}
+BLINK_OFF = dict(K=0.0, A=1.3, P=2.2, R=0.5, C=1.8, G=2.9, T=0.7, M=2.0, Y=1.1)   # so characters don't blink in sync
 
 # ---- story formats. Adding a format = add an entry here + its scene(s) in scenes.py + a section in writer.PROMPT.
 FORMATS = {
@@ -46,7 +50,15 @@ FORMATS = {
         parts=3, label="BHAKT KATHA",
         scenes=("walk", "meet", "divine"), default_scene="meet", speakers=("N", "K", "A", "P"), named="P",
     ),
+    "comedy": dict(
+        parts=1, label="CHINTU AUR MAMA",
+        scenes=("gali", "ghar", "dukaan"), default_scene="gali", speakers=("N", "T", "M", "Y"), named=None,
+    ),
 }
-KINDS = tuple(FORMATS)          # rotation order: paheli -> devotional -> paheli ...
+KINDS = tuple(FORMATS)                  # every format the engine can draw
+KATHA_KINDS = ("paheli", "devotional")  # the daily katha slot takes turns between these
+COMEDY_STYLES = ("doodle", "desi")      # comedy reels take turns between the two looks
+# what each daily slot (IST, see reels/schedule.py) posts: two trending comedy reels and one katha part
+SLOT_KIND = {"12:00": "comedy", "16:00": "comedy", "19:00": "katha"}
 MOODS = ("sad", "neutral", "happy", "angry", "shock")
 ICONS = ("gallows", "sword", "question", "tick", "cross", "coin", "door", "lamp", "crown", "clock")
