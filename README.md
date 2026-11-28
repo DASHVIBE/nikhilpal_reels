@@ -30,6 +30,7 @@ Har ghante GitHub check karta hai: koi slot (12 PM / 4 PM / 7 PM) 3 ghante mein 
   ├─ 12 PM / 4 PM: aaj ke agle trending topic par Claude se comedy reel (doodle aur desi baari-baari)
   ├─ 7 PM: state/series.json mein chal rahi katha ka agla part?  ── nahi ──► Claude se nayi series (sab parts)
   ├─ awaaz (edge-tts) → animation → reel.mp4
+  ├─ video check (reels/qa.py): fail ho to upload NAHI, agle ghante dobara koshish
   ├─ YouTube upload, 3 ghante baad publish (12 PM / 4 PM / 7 PM)
   └─ state/ commit (history, series, aur fail hua ho to last_error.txt)
 ```
@@ -37,12 +38,23 @@ Claude fail ho jaye to `samples/` ki series use hoti hai (har format ki 2: Sardi
 Pundalik Ki Eent, Barbarik Ka Sheesh Daan, Jaadui Lakdi Ka Nyay, Thaili Kiski?), taaki us din ki video na chhoote. Claude ki adhoori script dobara likhwayi jaati hai.
 YouTube secrets na hon to scheduled run chupchaap ruk jaata hai (fail email nahi aata).
 
+## Upload se pehle video check
+Har video banne ke baad `reels/qa.py` asli mp4 ko jaanchta hai, sab sahi ho tabhi upload hota hai:
+- **Picture:** 1080x1920, 30 fps, saare frame maujood (kuch kata ya chhoota nahi), koi kaali ya ruki hui tasveer nahi.
+- **Awaaz:** audio track poora, aawaz na bahut dheemi na phati hui, beech me lambi khamoshi nahi, har caption ke
+  waqt bolne wale ki awaaz sach me sunai deti hai.
+- **Script:** har line video me aayi, har line ki awaaz poori (na kati na kheenchi), captions aur title khaali nahi.
+- Awaaz me gadbad ho to awaaz dobara bana kar ek baar aur render hota hai. Phir bhi fail ho to video upload nahi
+  hoti, run laal (fail) dikhta hai aur agla ghanta dobara koshish karta hai.
+- Nateeja run ke page par **"Video check: PASS/FAIL"** me dikhta hai, aur `qa.json` video ke saath Artifacts me.
+
 ## Code ka naksha (`reels/`)
 
 | File | Kaam |
 |---|---|
 | `config.py` | **Saari settings**: video size, voices, caption names, aur dono formats ke rules |
 | `pipeline.py` | Roz ka run: slot ke hisaab se comedy ya katha → render → upload → state save |
+| `qa.py` | Upload se pehle video check: frames, awaaz, captions, kuch chhoota to nahi |
 | `trends.py` | Subah ki trend research (Claude + web search) → `state/trends.json` |
 | `comedy.py` | Comedy ke characters (Chintu, Mama, Pinki), dono look, gali / ghar / dukaan |
 | `writer.py` | Claude ko prompt + JSON schema; poori series likhwata hai |

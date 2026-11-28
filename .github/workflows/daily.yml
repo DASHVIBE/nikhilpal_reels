@@ -95,6 +95,7 @@ jobs:
           path: |
             out/reel.mp4
             out/script.json
+            out/qa.json
           retention-days: 7
           if-no-files-found: ignore
 
