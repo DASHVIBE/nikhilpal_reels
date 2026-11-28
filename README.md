@@ -19,7 +19,8 @@ GitHub Actions par chalta hai, laptop on rakhne ki zaroorat nahi.
 - 2D cartoon animation, Hindi awaaz, captions, music: sab code se banta hai, koi paid service nahi.
 
 ## Channel ka look
-flat ink-outline cartoon, shaam/neela-marble palette, mard narrator, neeche plum caption box, kone me saffron hook ribbon,
+Katha: flat vector cartoon (lambe side-profile characters, mukut, pagdi, rang bhare kapde). Comedy: doodle aur desi doodle.
+Backgrounds: shaam/neela-marble palette, mard narrator, neeche plum caption box, kone me saffron hook ribbon,
 Bangers titles, iris transition, harmonium + santoor music, kone me `NIKHIL PAL` watermark (`config.CHANNEL_NAME`).
 
 ## Roz kya hota hai
@@ -61,7 +62,8 @@ Har video banne ke baad `reels/qa.py` asli mp4 ko jaanchta hai, sab sahi ho tabh
 | `timeline.py` | Script ko render-ready banata hai: camera, mood, awaaz, timing |
 | `render.py` | Har frame jodta hai (shot + overlays) aur ffmpeg se mp4 banata hai |
 | `scenes.py` | Backgrounds aur shots: jungle (walk, meet, divine), darbar |
-| `characters.py` | Characters: Krishna, Arjun, aam aadmi, Raja, Chatur, sipahi |
+| `vector.py` | Katha ke characters, flat vector look (side profile): Krishna, Arjun, bhakt, Raja, Chatur, sipahi |
+| `characters.py` | Purane ink characters (ab sirf zameen par parchhai ke liye) |
 | `canvas.py` | Flat "ink" cartoon canvas (motti outline + cel shadow) + sprite cache |
 | `overlays.py` | Captions, title card, end card, hook bar, sticker, icon cards |
 | `audio.py` | Awaaz, lip-sync, music (harmonium, santoor, paheli me tik-tik + dhadkan), sound effects |

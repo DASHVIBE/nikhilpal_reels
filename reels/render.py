@@ -82,7 +82,7 @@ def draw_cards(frame, s, ts):
     if not cards or ts <= 0.3:
         return
     xs = [W / 2] if len(cards) == 1 else [W / 2 - 150, W / 2 + 150]
-    y = 640 if s.get("cam") == "chatur" else 1050    # never over a face: above Chatur in his close-up
+    y = 1050                                         # chest height: below every face, above the captions
     for j, cd in enumerate(cards):
         img = cached(("card", cd["icon"], cd["label"]), lambda: ov.make_card(cd["icon"], cd["label"]))
         a = max(0.0, ts - 0.3 - j*0.25)

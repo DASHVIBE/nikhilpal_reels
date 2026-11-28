@@ -9,7 +9,8 @@ from PIL import Image, ImageDraw, ImageFilter
 from .config import W, H, SS
 from .util import clamp, lerp, ease_io, ease_out, Pen
 from .canvas import SC, sprite, E, POLY
-from .characters import char, shadow
+from .characters import shadow
+from .vector import char          # katha characters in the flat vector look (style A)
 
 GY = 1500   # ground line of the forest clearing
 
@@ -160,7 +161,7 @@ def shot_walk(t, s):
     else:
         for x in (380, 700): shadow(img, x, 1690, 95)
         char(img, p, "K", 380, 1690, 1.45, t, mood="smile", look=(0.5, 0), walking=True)
-        char(img, p, "A", 700, 1690, 1.45, t + 0.25, mood="smile", look=(-0.5, 0), walking=True)
+        char(img, p, "A", 700, 1690, 1.45, t + 0.25, mood="smile", look=(-0.5, 0), walking=True, face=1)
     dust(p, t)
     e = ease_io(t / s["dur"])
     return img, dict(zoom=lerp(1.0, 1.06, e), cx=540, cy=1000)
@@ -181,7 +182,7 @@ def shot_meet(t, s):
     ppose = "wipe" if (pmood == "sad" and pt < 0.05 and (t % 5) < 1.8) else "stand"
     plook = (-1, 0) if (talk("K") > 0 or talk("A") > 0 or pm == "listen") else (0, 0.5)
     shadow(img, 800, GY - 4, 130); shadow(img, ax + off, GY, 85); shadow(img, kx + off, GY, 85)
-    char(img, p, "P", 800, GY, 1.3, t, pose=ppose, mood=pmood, talk=pt, look=plook, sit=True)
+    char(img, p, "P", 800, GY, 1.3, t, pose=ppose, mood=pmood, talk=pt, look=plook, sit=True, face=-1)
     ap = s.get("apose") or ("talk" if talk("A") > 0.05 else "stand")
     kp = s.get("kpose") or ("talk" if talk("K") > 0.05 else "stand")
     drawK = lambda: char(img, p, "K", kx + off, GY, 1.3, t, pose=kp, mood="smile", talk=talk("K"), look=(s.get("klook", 0.5), 0), walking=arrive or kwalk)
@@ -191,8 +192,8 @@ def shot_meet(t, s):
     g, ox, oy = asset("meet_fg", lambda: fg_grass(1480, 1560, 160, 5)); img.paste(g, (int(ox), int(oy)), g)
     dust(p, t)
     nm = s.get("cam", "wide"); e = ease_io(t / s["dur"])
-    z, cx, cy = dict(wide=(1.0, 540, 1000), a=(1.75, ax, GY - 470), k=(1.75, kx, GY - 470), p=(1.8, 800, GY - 380),
-                     ka=(1.4, (kx + ax) / 2, GY - 440), kp=(1.45, (kx + 800) / 2, GY - 440))[nm]
+    z, cx, cy = dict(wide=(1.0, 540, 1000), a=(1.7, ax, GY - 760), k=(1.7, kx, GY - 760), p=(1.75, 800, GY - 600),
+                     ka=(1.4, (kx + ax) / 2, GY - 700), kp=(1.4, (kx + 800) / 2, GY - 660))[nm]
     return img, dict(zoom=z * lerp(1.0, 1.06, e), cx=cx, cy=cy)
 
 def shot_divine(t, s):
@@ -259,7 +260,7 @@ def shot_darbar(t, s):
     char(img, p, "C", 760, 1760, 1.3, t + 0.4, pose=cpose, mood=cm, talk=ct, look=(-0.5, -0.5))
     dust(p, t)
     nm = s.get("cam", "wide"); e = ease_io(t / s["dur"])
-    z, cx, cy = dict(wide=(1.0, 540, 1000), raja=(1.75, 540, 860), chatur=(1.7, 760, 1230), both=(1.25, 650, 1130))[nm]
+    z, cx, cy = dict(wide=(1.0, 540, 1000), raja=(1.7, 540, 800), chatur=(1.6, 760, 1120), both=(1.25, 650, 1060))[nm]
     return img, dict(zoom=z * lerp(1.0, 1.05, e), cx=cx, cy=cy)
 
 
